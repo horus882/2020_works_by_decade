@@ -23,7 +23,8 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ccc;
+    background: url(https://www.huangyikai.com/uploads/915979824b4d1c64766028e906eda418.jpg) center center no-repeat;
+    background-size: cover;
     z-index: -1;
   }
 
