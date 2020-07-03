@@ -12,9 +12,23 @@ Vue.config.productionTip = false
 
 const router = new VueRouter({
   routes: [
-    { path: '/about', name: 'About', component: About },
-    { path: '/works', name: 'Works', component: Works },
-    { path: '/',      name: 'Index', component: Index }
+    {
+      path: '/',     
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
+    },
+    {
+      // path: '/works',
+      path: '/works/:id?',
+      name: 'Works',
+      component: Works,
+      // params: true
+    }
     // { path: '/', redirect: '/about' }
   ]
 })

@@ -28,10 +28,8 @@ export default {
   },
   data() {
     return {
-      currentPage: null,
-      mode: {
-        light: true
-      }
+      mode: { light: true },
+      currentPage:  null
     }
   },
   // computed: {
@@ -42,6 +40,8 @@ export default {
   methods: {
     checkCurrentPage() {
       this.currentPage = this.$route.name.toLowerCase();
+      // this.currentPage = this.$route.name;
+      console.log(this.$route);
     }
   },
   mounted() {
@@ -151,6 +151,7 @@ h3 {
 #main {
   position: relative;
   @media (min-width: $screen-lg) {
+    padding-right: 470px;
     aside {
       display: block!important;
       opacity: 1!important;
@@ -165,16 +166,17 @@ h3 {
 }
 
 .page {
-  position: absolute;
+  // position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
   padding-bottom: 75px;
   box-sizing: border-box;
-  @media (min-width: $screen-lg) {
-    padding-right: 470px;
-  }
+  // @media (min-width: $screen-lg) {
+  //   padding-right: 470px;
+  // }
 }
 
 .back {

@@ -14,6 +14,10 @@
         <li>
           <router-link to="/about">About</router-link>
         </li>
+        <!--
+        <li><router-link to="/works/77">Works 77</router-link></li>
+        <li><router-link :to="{name: 'Works', params: {id: 77}}">Works 77</router-link></li>
+        -->
       </ul>
     </nav>
     <p class="text">
