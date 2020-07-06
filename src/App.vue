@@ -41,7 +41,7 @@ export default {
     checkCurrentPage() {
       this.currentPage = this.$route.name.toLowerCase();
       // this.currentPage = this.$route.name;
-      console.log(this.$route);
+      // console.log(this.$route);
     }
   },
   mounted() {

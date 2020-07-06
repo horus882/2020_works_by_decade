@@ -21,7 +21,8 @@
       <div class="detail" v-if="this.$route.params.id">
         <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
         <div class="images">
-          <img :src="this.portfolio[this.$route.params.id - 1].images[2]">
+          <img v-for="(item, index) in this.portfolio[this.$route.params.id - 1].images" v-bind:key="index" :src="item">
+          <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
         </div>
         <div class="info">
           <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/→/g, '<i></i>')"></p>
@@ -45,9 +46,9 @@ export default {
           year:       2017,
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
-            'https://fakeimg.pl/640x480/?text=NB-1',
-            'https://fakeimg.pl/480x640/?text=NB-2',
-            'https://fakeimg.pl/640x640/?text=NB-3'
+            'https://fakeimg.pl/1200x760/?text=NB-1',
+            'https://fakeimg.pl/760x1200/?text=NB-2',
+            'https://fakeimg.pl/940x940/?text=NB-3'
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
@@ -57,9 +58,9 @@ export default {
           year:       2017,
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
-            'https://fakeimg.pl/640x480/?text=NBC-1',
-            'https://fakeimg.pl/480x640/?text=NBC-2',
-            'https://fakeimg.pl/640x640/?text=NBC-3'
+            'https://fakeimg.pl/1200x760/?text=NBC-1',
+            'https://fakeimg.pl/760x1200/?text=NBC-2',
+            'https://fakeimg.pl/940x940/?text=NBC-3'
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
@@ -69,9 +70,9 @@ export default {
           year:       2018,
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
-            'https://fakeimg.pl/640x480/?text=KTH-1',
-            'https://fakeimg.pl/480x640/?text=KTH-2',
-            'https://fakeimg.pl/640x640/?text=KTH-3'
+            'https://fakeimg.pl/1200x760/?text=KTH-1',
+            'https://fakeimg.pl/760x1200/?text=KTH-2',
+            'https://fakeimg.pl/940x940/?text=KTH-3'
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
@@ -81,9 +82,9 @@ export default {
           year:       2016,
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
-            'https://fakeimg.pl/640x480/?text=KIRIN-1',
-            'https://fakeimg.pl/480x640/?text=KIRIN-2',
-            'https://fakeimg.pl/640x640/?text=KIRIN-3'
+            'https://fakeimg.pl/1200x760/?text=KIRIN-1',
+            'https://fakeimg.pl/760x1200/?text=KIRIN-2',
+            'https://fakeimg.pl/940x940/?text=KIRIN-3'
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
@@ -93,9 +94,9 @@ export default {
           year:       2016,
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
-            'https://fakeimg.pl/640x480/?text=X-1',
-            'https://fakeimg.pl/480x640/?text=X-2',
-            'https://fakeimg.pl/640x640/?text=X-3'
+            'https://fakeimg.pl/1200x760/?text=X-1',
+            'https://fakeimg.pl/760x1200/?text=X-2',
+            'https://fakeimg.pl/940x940/?text=X-3'
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
@@ -232,6 +233,7 @@ export default {
       img {
         display: block;
         width: 100%;
+        margin-bottom: 15px;
       }
     }
 
