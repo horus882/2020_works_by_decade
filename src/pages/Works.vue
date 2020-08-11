@@ -250,7 +250,7 @@ export default {
       img {
         display: block;
         width: 100%;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
       }
     }
 
