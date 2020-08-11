@@ -22,7 +22,10 @@
     </transition>
     <transition name="fade">
       <div class="detail" v-if="this.$route.params.id">
-        <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
+        <div class="head">
+          <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
+          <p class="type">{{ this.portfolio[this.$route.params.id - 1].type }}</p>
+        </div>
         <div class="images">
           <img v-for="(item, index) in this.portfolio[this.$route.params.id - 1].images" v-bind:key="index" :src="item">
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
@@ -53,6 +56,7 @@ export default {
           id:         1,
           name:       'New Balance 247',
           year:       2017,
+          type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
             'https://fakeimg.pl/1200x760/?text=NB-1',
@@ -223,25 +227,37 @@ export default {
     padding-top: 6px;
     padding-bottom: 75px;
 
-    h3 {
-      font-size: 20px;
-      margin: 0px 0 40px;
-      line-height: 1.3;
+    .head {
+      margin-bottom: 40px;
       @media (min-width: $screen-md) {
-        // position: absolute;
-        // top: -32px;
-        // left: 120px;
-        font-size: 24px;
         margin: -38px 0 0 120px;
-        padding-right: 150px;
+        padding-right: 130px;
       }
-      &::after {content: none;}
+      h3 {
+        font-size: 20px;
+        margin: 0;
+        // margin: 0px 0 40px;
+        line-height: 1.3;
+        @media (min-width: $screen-md) {
+          font-size: 24px;
+        }
+        &::after {content: none;}
+      }
       span {
         position: relative;
         top: 5px;
         font-size: 12px;
         vertical-align: top;
         @media (min-width: $screen-md) {top: 8px;}
+      }
+      .type {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 7px 0 0;
+        @media (min-width: $screen-md) {
+          font-size: 16px;
+          margin: 14px 0 0;
+        }
       }
     }
 
