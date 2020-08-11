@@ -3,19 +3,22 @@
     <h2 v-if="!this.$route.params.id">Works</h2>
     <h2 v-else><router-link to="/works">Works</router-link></h2>
     <transition name="fade">
-      <ul class="list" v-if="!this.$route.params.id">
-        <li v-for="(item, index) in portfolio" v-bind:key="index">
-          <router-link :to="{ name: 'Works', params: { id: item.id } }">
-            <div class="thumbnail">
-              <img :src="item.thumbnail">
-            </div>
-            <div class="info">
-              <p class="name">{{ item.name }}</p>
-              <p class="year">({{ item.year }})</p>
-            </div>
-          </router-link>
-        </li>
-      </ul>
+      <div class="list" v-if="!this.$route.params.id">
+        <ul>
+          <li v-for="(item, index) in portfolio" v-bind:key="index">
+            <router-link :to="{ name: 'Works', params: { id: item.id } }">
+              <div class="thumbnail">
+                <img :src="item.thumbnail">
+              </div>
+              <div class="info">
+                <p class="name">{{ item.name }}</p>
+                <p class="year">({{ item.year }})</p>
+              </div>
+            </router-link>
+          </li>
+        </ul>
+        <Footer />
+      </div>
     </transition>
     <transition name="fade">
       <div class="detail" v-if="this.$route.params.id">
@@ -27,14 +30,20 @@
         <div class="info">
           <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/→/g, '<i></i>')"></p>
         </div>
+        <Footer />
       </div>
     </transition>
   </div>
 </template>
 
 <script>
+import Footer from '../components/Footer.vue'
+
 export default {
   name: 'Works',
+  components: {
+    Footer
+  },
   props: {
   },
   data() {
@@ -126,13 +135,15 @@ export default {
   .list {
     position: absolute;
     width: 100%;
-    font-size: 0;
     text-align: left;
     padding-top: 36px;
     padding-bottom: 75px;
     box-sizing: border-box;
     @media (min-width: $screen-md) { padding-top: 57px; }
     @media (min-width: $screen-lg) { max-width: 860px; }
+    ul {
+      font-size: 0;
+    }
     li {
       display: inline-block;
       width: 50%;
@@ -196,6 +207,12 @@ export default {
           transform: scale(0.83);
           @media (min-width: $screen-md) { font-size: 13px; transform: none; }
         }
+      }
+    }
+    footer {
+      margin-top: 3em;
+      @media (min-width: $screen-md) {
+        margin-top: 1em;
       }
     }
   }
@@ -262,6 +279,13 @@ export default {
           height: 24px;
           margin: 0 5px;
         }
+      }
+    }
+
+    footer {
+      // padding-left: 10px;
+      @media (min-width: $screen-md) {
+        padding-left: 20px;
       }
     }
 

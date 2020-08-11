@@ -20,12 +20,18 @@
         Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
       </p>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../components/Footer.vue'
+
 export default {
   name: 'About',
+  components: {
+    Footer
+  },
   props: {
   }
 }

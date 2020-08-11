@@ -174,9 +174,11 @@ h3 {
   height: auto;
   padding-bottom: 75px;
   box-sizing: border-box;
-  // @media (min-width: $screen-lg) {
-  //   padding-right: 470px;
-  // }
+  @media (min-width: $screen-lg) {
+    footer {
+      display: none;
+    }
+  }
 }
 
 .back {
