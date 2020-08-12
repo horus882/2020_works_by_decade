@@ -69,6 +69,7 @@ export default {
           id:         2,
           name:       'New Balance 247 Campaign',
           year:       2017,
+          type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
             'https://fakeimg.pl/1200x760/?text=NBC-1',
@@ -81,6 +82,7 @@ export default {
           id:         3,
           name:       '與世界一起 Cheers！｜KIRIN 冰結旅途',
           year:       2018,
+          type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
             'https://fakeimg.pl/1200x760/?text=KTH-1',
@@ -93,6 +95,7 @@ export default {
           id:         4,
           name:       'KIRIN Official Site',
           year:       2016,
+          type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
             'https://fakeimg.pl/1200x760/?text=KIRIN-1',
@@ -105,6 +108,7 @@ export default {
           id:         5,
           name:       'XXX XXX XXX',
           year:       2016,
+          type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
           images:     [
             'https://fakeimg.pl/1200x760/?text=X-1',
@@ -223,6 +227,15 @@ export default {
         }
       }
     }
+    // &.fade-enter-to,
+    // &.fade-leave-to {
+
+    //   li {
+    //     opacity: 0;
+    //     transform: scale(0.5);
+    //   }
+
+    // }
     footer {
       margin-top: 3em;
       @media (min-width: $screen-md) {
@@ -238,7 +251,7 @@ export default {
 
       li {
         opacity: 0;
-        transform: scale(0.5);
+        transform: scale(0.65);
       }
 
     }
@@ -253,6 +266,7 @@ export default {
 
     .head {
       margin-bottom: 40px;
+      // overflow: hidden;
       @media (min-width: $screen-md) {
         margin: -38px 0 0 120px;
         padding-right: 130px;
@@ -262,6 +276,9 @@ export default {
         margin: 0;
         // margin: 0px 0 40px;
         line-height: 1.3;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s cubic-bezier(0.25, 1, 0.5, 1) .75s;
         @media (min-width: $screen-md) {
           font-size: 24px;
         }
@@ -278,11 +295,28 @@ export default {
         font-size: 13px;
         font-weight: 700;
         margin: 7px 0 0;
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s cubic-bezier(0.25, 1, 0.5, 1) .85s;
         @media (min-width: $screen-md) {
           font-size: 16px;
           margin: 14px 0 0;
         }
       }
+    }
+
+    &.fade-enter,
+    &.fade-leave-to {
+
+      .head {
+
+        h3, .type {
+          opacity: 0;
+          transform: translateX(-25px);
+        }
+
+      }
+
     }
 
     .images {
