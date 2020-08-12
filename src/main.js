@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 
+import VueAnime from './vue-anime';
+Vue.use(VueAnime);
+
 import Index from './pages/Index'
 import About from './pages/About'
 import Works from './pages/Works'

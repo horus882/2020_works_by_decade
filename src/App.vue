@@ -21,6 +21,8 @@
 <script>
 import Aside from './components/Aside.vue'
 
+// import Vue from 'vue'
+
 export default {
   name: 'App',
   components: {
@@ -39,6 +41,7 @@ export default {
   // },
   created() {
     window.addEventListener('scroll', this.resizeAndScroll);
+    window.addEventListener('resize', this.resizeAndScroll);
   },
   methods: {
     checkCurrentPage() {
@@ -62,7 +65,12 @@ export default {
         sidebar.style.position = 'fixed';
         sidebar.style.bottom   = sidebarHeight > windowHeight ? 0 : 'auto';
       } else {
-        sidebar.style.position = 'relative';
+        if (windowWidth >= 1200) {
+          sidebar.style.position = 'relative';
+        } else {
+          sidebar.style.position = 'absolute';
+          sidebar.style.bottom   = 'auto';
+        }
       }
     }
   },
@@ -72,9 +80,18 @@ export default {
   },
   watch: {
     $route() { // to, from
-      // console.log('to: ' + to.name);
+      // console.log(to);
       // console.log('from: ' + from.name);
       this.checkCurrentPage();
+      // if (typeof(to.params.id) !== 'undefined' && to.params.id !== '') {
+      //   var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
+      //   Vue.$animeJS({
+      //     targets:    scrollElement,
+      //     scrollTop:  0,
+      //     duration:   750,
+      //     easing:   'easeInOutSine'
+      //   });
+      // }
     }
   }
 }
