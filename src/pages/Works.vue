@@ -145,8 +145,13 @@ export default {
     box-sizing: border-box;
     @media (min-width: $screen-md) { padding-top: 57px; }
     @media (min-width: $screen-lg) { max-width: 860px; }
+    @media (min-width: $screen-2xl) { max-width: 1320px; }
     ul {
       font-size: 0;
+      margin: 0 -10px;
+      @media (min-width: $screen-md) {
+        margin: 0 -30px;
+      }
     }
     li {
       display: inline-block;
@@ -155,14 +160,16 @@ export default {
       vertical-align: top;
       margin-bottom: 20px;
       box-sizing: border-box;
-      &:nth-of-type(odd) { padding-right: 10px; }
-      &:nth-of-type(even) { padding-left: 10px; }
+      padding: 0 10px;
+      // &:nth-of-type(odd) { padding-right: 10px; }
+      // &:nth-of-type(even) { padding-left: 10px; }
       @media (min-width: $screen-md) {
+        padding: 0 30px;
         margin-bottom: 50px;
-        &:nth-of-type(odd) { padding-right: 30px; }
-        &:nth-of-type(even) { padding-left: 30px; }
+        // &:nth-of-type(odd) { padding-right: 30px; }
+        // &:nth-of-type(even) { padding-left: 30px; }
       }
-      @media (min-width: $screen-lg) { max-width: 430px; }
+      @media (min-width: $screen-lg) { max-width: 460px; }
       a { display: block }
       .thumbnail {
         position: relative;
