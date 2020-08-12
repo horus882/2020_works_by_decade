@@ -6,10 +6,10 @@ module.exports = {
             }
         }
     },
-    // configureWebpack: {
-    //     externals: {
-    //         'jquery': 'jQuery'
-    //     }
-    // },
+    configureWebpack: {
+        externals: {
+            'jquery': 'jQuery'
+        }
+    },
     publicPath: './'
 }

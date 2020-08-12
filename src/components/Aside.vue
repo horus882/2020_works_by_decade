@@ -1,5 +1,5 @@
 <template>
-  <aside>
+  <aside id="sidebar">
     <h1>
       <router-link to="/">Works<br>by Decade</router-link>
     </h1>
@@ -52,6 +52,12 @@ aside {
   width: 100%;
   height: auto;
   padding-bottom: 75px;
+
+  @media (min-width: $screen-lg) {
+    position: relative;
+    top: auto;
+    bottom: 0;
+  }
 
   &::before {
     content: '';

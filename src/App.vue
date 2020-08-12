@@ -37,15 +37,38 @@ export default {
   //     return this.$route.name;
   //   }
   // },
+  created() {
+    window.addEventListener('scroll', this.resizeAndScroll);
+  },
   methods: {
     checkCurrentPage() {
       this.currentPage = this.$route.name.toLowerCase();
       // this.currentPage = this.$route.name;
       // console.log(this.$route);
+    },
+    resizeAndScroll() {
+
+      var windowPos       = document.documentElement.scrollTop || document.body.scrollTop || 0,
+          windowWidth     = window.innerWidth,
+          windowHeight    = window.innerHeight,
+          sidebar         = document.getElementById('sidebar'),
+          sidebarHeight   = sidebar.offsetHeight,
+          // pageHeight      = document.getElementsByClassName('page')[0].offsetHeight,
+          body            = document.body,
+          bodyHeight      = document.documentElement.scrollHeight || document.documentElement.offsetHeight,
+          bodyPaddingTop  = window.getComputedStyle(body, null).getPropertyValue('padding-top');
+
+      if (windowWidth >= 1200 && bodyHeight > sidebarHeight && this.currentPage == 'works' && ( windowPos + windowHeight - parseInt(bodyPaddingTop) ) >= sidebarHeight) {
+        sidebar.style.position = 'fixed';
+        sidebar.style.bottom   = sidebarHeight > windowHeight ? 0 : 'auto';
+      } else {
+        sidebar.style.position = 'relative';
+      }
     }
   },
   mounted() {
     this.checkCurrentPage();
+    this.resizeAndScroll();
   },
   watch: {
     $route() { // to, from
@@ -80,6 +103,7 @@ body {
   // background-color: #e5e5e5;
   // @media (min-width: $screen-md) { padding: 73px 80px; }
   @media (min-width: $screen-md) { padding: 76px 80px; }
+  @media (min-width: $screen-lg) { padding-right: 0; }
 }
 
 a, a:hover {
@@ -151,13 +175,15 @@ h3 {
 #main {
   position: relative;
   @media (min-width: $screen-lg) {
-    padding-right: 470px;
+    // padding-right: 470px;
     aside {
+      float: right;
       display: block!important;
       opacity: 1!important;
       width: 360px;
       right: 0;
       left: auto;
+      margin-right: 80px;
     }
   }
   // padding: 50px 30px;
@@ -175,6 +201,9 @@ h3 {
   padding-bottom: 75px;
   box-sizing: border-box;
   @media (min-width: $screen-lg) {
+    position: absolute;
+    float: left;
+    width: calc(100% - 470px - 80px);
     footer {
       display: none;
     }

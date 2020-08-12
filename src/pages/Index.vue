@@ -17,6 +17,8 @@ export default {
 
 #page-index {
 
+  padding-bottom: 0;
+
   .background {
     position: fixed;
     top: 0;
