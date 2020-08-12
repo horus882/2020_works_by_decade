@@ -47,7 +47,8 @@ export default {
     checkCurrentPage() {
       this.currentPage = this.$route.name.toLowerCase();
       // this.currentPage = this.$route.name;
-      // console.log(this.$route);
+      // console.log(this.currentPage);
+      // document.getElementById('page-' + this.currentPage).classList.add('page-intro');
     },
     resizeAndScroll() {
 
@@ -83,6 +84,7 @@ export default {
       // console.log(to);
       // console.log('from: ' + from.name);
       this.checkCurrentPage();
+      // document.getElementsByClassName('page-intro')[0].classList.remove('page-intro');
       // if (typeof(to.params.id) !== 'undefined' && to.params.id !== '') {
       //   var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
       //   Vue.$animeJS({

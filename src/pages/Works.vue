@@ -5,7 +5,7 @@
     <transition name="fade">
       <div class="list" v-if="!this.$route.params.id">
         <ul>
-          <li v-for="(item, index) in portfolio" v-bind:key="index">
+          <li v-for="(item, index) in portfolio" v-bind:key="index" v-bind:style="{'transition-delay': (0.1 * index) + 's'}">
             <router-link :to="{ name: 'Works', params: { id: item.id } }">
               <div class="thumbnail">
                 <img :src="item.thumbnail">
@@ -161,6 +161,9 @@ export default {
       margin-bottom: 20px;
       box-sizing: border-box;
       padding: 0 10px;
+      opacity: 1;
+      transform: scale(1);
+      transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
       // &:nth-of-type(odd) { padding-right: 10px; }
       // &:nth-of-type(even) { padding-left: 10px; }
       @media (min-width: $screen-md) {
@@ -226,6 +229,20 @@ export default {
         margin-top: 1em;
       }
     }
+  }
+
+  &.fade-enter-to,
+  &.fade-leave-to {
+
+    .list {
+
+      li {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+    }
+
   }
 
   .detail {
