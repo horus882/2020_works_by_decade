@@ -18,22 +18,38 @@ const router = new VueRouter({
     {
       path: '/',     
       name: 'Index',
-      component: Index
+      component: Index,
+      meta: {
+        title: 'Index | Works by Decade'
+      }
     },
     {
       path: '/about',
       name: 'About',
-      component: About
+      component: About,
+      meta: {
+        title: 'About | Works by Decade'
+      }
     },
     {
       // path: '/works',
       path: '/works/:id?',
       name: 'Works',
       component: Works,
+      meta: {
+        title: 'Works | Works by Decade'
+      }
       // params: true
     }
     // { path: '/', redirect: '/about' }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next();
 })
 
 new Vue({

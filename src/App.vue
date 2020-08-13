@@ -31,7 +31,8 @@ export default {
   data() {
     return {
       mode: { light: true },
-      currentPage:  null
+      currentPage:  null,
+      // Scrollbar: null
     }
   },
   // computed: {
@@ -78,11 +79,17 @@ export default {
   mounted() {
     this.checkCurrentPage();
     this.resizeAndScroll();
+    // this.Scrollbar = window.Scrollbar;
+    // this.Scrollbar.init(document.querySelector('#app'), {
+      
+    // }); // , options
   },
   watch: {
-    $route() { // to, from
-      // console.log(to);
-      // console.log('from: ' + from.name);
+    $route(to, from) { // to, from
+      console.log('to: ');
+      console.log(to);
+      console.log('from: ');
+      console.log(from);
       this.checkCurrentPage();
       // document.getElementsByClassName('page-intro')[0].classList.remove('page-intro');
       // if (typeof(to.params.id) !== 'undefined' && to.params.id !== '') {
