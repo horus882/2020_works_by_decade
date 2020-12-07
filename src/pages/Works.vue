@@ -29,6 +29,7 @@
         <div class="media">
           <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
             <img v-if="item.type == 'image'" :src="getImageUrl(item.path)">
+            <div class="embed" v-html="item.html" v-else></div>
           </div>
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
         </div>
@@ -96,9 +97,13 @@ export default {
           thumbnail:  'https://fakeimg.pl/400x400/',
           media:     [
             {
-              type: 'image',
-              path: 'images/works/kiann/1.jpg'
+              type: 'video',
+              html: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
             },
+            // {
+            //   type: 'image',
+            //   path: 'images/works/kiann/1.jpg'
+            // },
             {
               type: 'image',
               path: 'images/works/kiann/2.jpg'
