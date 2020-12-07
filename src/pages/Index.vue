@@ -1,6 +1,6 @@
 <template>
   <div id="page-index" class="page">
-    <div class="background"></div>
+    <div class="background" v-bind:style="{'background-image': 'url(' + require('@/assets/images/home/' + backgroundId + '.jpg') + ')'}"></div>
   </div>
 </template>
 
@@ -8,6 +8,15 @@
 export default {
   name: 'Index',
   props: {
+  },
+  data() {
+    return {
+      backgroundId: 1
+    }
+  },
+  mounted() {
+    this.backgroundId = (Math.floor(Math.random() * 7) + 1);
+    console.log(this.backgroundId);
   }
 }
 </script>
@@ -25,7 +34,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(https://www.huangyikai.com/uploads/915979824b4d1c64766028e906eda418.jpg) center center no-repeat;
+    background: url(../assets/images/home/1.jpg) center center no-repeat;
     background-size: cover;
     z-index: -1;
   }

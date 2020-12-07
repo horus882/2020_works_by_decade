@@ -26,8 +26,10 @@
           <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
           <p class="type">{{ this.portfolio[this.$route.params.id - 1].type }}</p>
         </div>
-        <div class="images">
-          <img v-for="(item, index) in this.portfolio[this.$route.params.id - 1].images" v-bind:key="index" :src="item">
+        <div class="media">
+          <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
+            <img v-if="item.type == 'image'" :src="getImageUrl(item.path)">
+          </div>
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
         </div>
         <div class="info">
@@ -54,75 +56,182 @@ export default {
       portfolio:    [
         {
           id:         1,
-          name:       'New Balance 247',
-          year:       2017,
+          name:       'Nike Free',
+          year:       2011,
           type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
-          images:     [
-            'https://fakeimg.pl/1200x760/?text=NB-1',
-            'https://fakeimg.pl/760x1200/?text=NB-2',
-            'https://fakeimg.pl/940x940/?text=NB-3'
+          media:     [
+            {
+              type: 'image',
+              path: 'images/works/sample/1.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/sample/2.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/sample/3.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/sample/4.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/sample/5.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/sample/6.jpg'
+            },
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
         {
           id:         2,
-          name:       'New Balance 247 Campaign',
-          year:       2017,
+          name:       'kiann',
+          year:       2019,
           type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
-          images:     [
-            'https://fakeimg.pl/1200x760/?text=NBC-1',
-            'https://fakeimg.pl/760x1200/?text=NBC-2',
-            'https://fakeimg.pl/940x940/?text=NBC-3'
+          media:     [
+            {
+              type: 'image',
+              path: 'images/works/kiann/1.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/2.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/3.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/4.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/5.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/6.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/7.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/8.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/9.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/10.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/11.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/12.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/13.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/14.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/15.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/16.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/17.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/18.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/19.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/20.jpg'
+            },
+            {
+              type: 'image',
+              path: 'images/works/kiann/21.jpg'
+            },
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
-        {
-          id:         3,
-          name:       '與世界一起 Cheers！｜KIRIN 冰結旅途',
-          year:       2018,
-          type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  'https://fakeimg.pl/400x400/',
-          images:     [
-            'https://fakeimg.pl/1200x760/?text=KTH-1',
-            'https://fakeimg.pl/760x1200/?text=KTH-2',
-            'https://fakeimg.pl/940x940/?text=KTH-3'
-          ],
-          info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
-        },
-        {
-          id:         4,
-          name:       'KIRIN Official Site',
-          year:       2016,
-          type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  'https://fakeimg.pl/400x400/',
-          images:     [
-            'https://fakeimg.pl/1200x760/?text=KIRIN-1',
-            'https://fakeimg.pl/760x1200/?text=KIRIN-2',
-            'https://fakeimg.pl/940x940/?text=KIRIN-3'
-          ],
-          info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
-        },
-        {
-          id:         5,
-          name:       'XXX XXX XXX',
-          year:       2016,
-          type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  'https://fakeimg.pl/400x400/',
-          images:     [
-            'https://fakeimg.pl/1200x760/?text=X-1',
-            'https://fakeimg.pl/760x1200/?text=X-2',
-            'https://fakeimg.pl/940x940/?text=X-3'
-          ],
-          info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
-        },
+        // {
+        //   id:         3,
+        //   name:       '與世界一起 Cheers！｜KIRIN 冰結旅途',
+        //   year:       2018,
+        //   type:       'Graphic Design / Hand Write / Photography',
+        //   thumbnail:  'https://fakeimg.pl/400x400/',
+        //   images:     [
+        //     'https://fakeimg.pl/1200x760/?text=KTH-1',
+        //     'https://fakeimg.pl/760x1200/?text=KTH-2',
+        //     'https://fakeimg.pl/940x940/?text=KTH-3'
+        //   ],
+        //   info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
+        // },
+        // {
+        //   id:         4,
+        //   name:       'KIRIN Official Site',
+        //   year:       2016,
+        //   type:       'Graphic Design / Hand Write / Photography',
+        //   thumbnail:  'https://fakeimg.pl/400x400/',
+        //   images:     [
+        //     'https://fakeimg.pl/1200x760/?text=KIRIN-1',
+        //     'https://fakeimg.pl/760x1200/?text=KIRIN-2',
+        //     'https://fakeimg.pl/940x940/?text=KIRIN-3'
+        //   ],
+        //   info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
+        // },
+        // {
+        //   id:         5,
+        //   name:       'XXX XXX XXX',
+        //   year:       2016,
+        //   type:       'Graphic Design / Hand Write / Photography',
+        //   thumbnail:  'https://fakeimg.pl/400x400/',
+        //   images:     [
+        //     'https://fakeimg.pl/1200x760/?text=X-1',
+        //     'https://fakeimg.pl/760x1200/?text=X-2',
+        //     'https://fakeimg.pl/940x940/?text=X-3'
+        //   ],
+        //   info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
+        // },
       ]
     }
   },
   computed: {
     id() {
       return this.portfolio[this.$route.params.id - 1];
+    }
+  },
+  methods: {
+    getImageUrl(source) {
+      return require('../assets/' + source);
     }
   }
 }
@@ -319,7 +428,7 @@ export default {
 
     }
 
-    .images {
+    .media {
       @media (min-width: $screen-md) {margin-top: 60px;}
       img {
         display: block;
