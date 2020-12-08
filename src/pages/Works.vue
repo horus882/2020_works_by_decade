@@ -28,8 +28,8 @@
         </div>
         <div class="media">
           <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
-            <img v-if="item.type == 'image'" :src="getImageUrl(item.path)">
-            <div class="embed" v-html="item.html" v-else></div>
+            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" :src="getImageUrl('images/works/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
+            <div class="embed" v-html="item" v-else></div>
           </div>
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
         </div>
@@ -61,32 +61,8 @@ export default {
           year:       2011,
           type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
-          media:     [
-            {
-              type: 'image',
-              path: 'images/works/sample/1.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/sample/2.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/sample/3.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/sample/4.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/sample/5.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/sample/6.jpg'
-            },
-          ],
+          folder:     'sample',
+          media:      ['loading.gif', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
         {
@@ -95,95 +71,10 @@ export default {
           year:       2019,
           type:       'Graphic Design / Hand Write / Photography',
           thumbnail:  'https://fakeimg.pl/400x400/',
-          media:     [
-            {
-              type: 'video',
-              html: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>'
-            },
-            // {
-            //   type: 'image',
-            //   path: 'images/works/kiann/1.jpg'
-            // },
-            {
-              type: 'image',
-              path: 'images/works/kiann/2.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/3.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/4.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/5.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/6.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/7.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/8.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/9.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/10.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/11.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/12.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/13.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/14.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/15.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/16.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/17.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/18.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/19.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/20.jpg'
-            },
-            {
-              type: 'image',
-              path: 'images/works/kiann/21.jpg'
-            },
+          folder:     'kiann',
+          media:      [
+            '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>',
+            '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg'
           ],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
         },
@@ -237,6 +128,9 @@ export default {
   methods: {
     getImageUrl(source) {
       return require('../assets/' + source);
+    },
+    getCurrentId() {
+      return this.$route.params.id - 1;
     }
   }
 }
@@ -438,6 +332,7 @@ export default {
       img {
         display: block;
         width: 100%;
+        image-rendering: -webkit-optimize-contrast;
         // margin-bottom: 15px;
       }
     }
