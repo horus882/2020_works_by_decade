@@ -63,6 +63,9 @@ export default {
           bodyHeight      = document.documentElement.scrollHeight || document.documentElement.offsetHeight,
           bodyPaddingTop  = window.getComputedStyle(body, null).getPropertyValue('padding-top');
 
+          // contentHeight   = document.querySelector('.list').offsetHeight;
+          // console.log(contentHeight);
+
       if (windowWidth >= 1200 && bodyHeight > sidebarHeight && this.currentPage == 'works' && ( windowPos + windowHeight - parseInt(bodyPaddingTop) ) >= sidebarHeight) {
         sidebar.style.position = 'fixed';
         sidebar.style.bottom   = sidebarHeight > windowHeight ? 0 : 'auto';
@@ -224,9 +227,11 @@ h3 {
   left: 0;
   width: 100%;
   height: auto;
-  padding-bottom: 75px;
+  // padding-bottom: 75px;
+  padding-bottom: 0;
   box-sizing: border-box;
   @media (min-width: $screen-lg) {
+    padding-bottom: 75px;
     position: absolute;
     float: left;
     width: calc(100% - 470px - 80px);

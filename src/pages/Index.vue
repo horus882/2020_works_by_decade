@@ -33,7 +33,10 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 100%;
     background: url(../assets/images/home/1.jpg) #000 center center no-repeat;
     background-size: cover;
     z-index: -1;

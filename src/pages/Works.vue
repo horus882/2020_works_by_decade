@@ -156,7 +156,7 @@ export default {
     padding-bottom: 75px;
     box-sizing: border-box;
     @media (min-width: $screen-md) { padding-top: 57px; }
-    @media (min-width: $screen-lg) { max-width: 860px; }
+    @media (min-width: $screen-lg) { max-width: 860px; min-height: (150vh); }
     @media (min-width: $screen-2xl) { max-width: 1320px; }
     ul {
       font-size: 0;
