@@ -7,20 +7,22 @@ Vue.use(VueAnime);
 
 import Index from './pages/Index'
 import About from './pages/About'
-import Works from './pages/Works'
+import Work from './pages/Work'
 
 Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
 const router = new VueRouter({
+  mode: 'history',
+  base: '/work10',
   routes: [
     {
       path: '/',     
       name: 'Index',
       component: Index,
       meta: {
-        title: 'Index | Works by Decade'
+        title: 'Index | Work of a Decade'
       }
     },
     {
@@ -28,16 +30,15 @@ const router = new VueRouter({
       name: 'About',
       component: About,
       meta: {
-        title: 'About | Works by Decade'
+        title: 'About | Work of a Decade'
       }
     },
     {
-      // path: '/works',
-      path: '/works/:id?',
-      name: 'Works',
-      component: Works,
+      path: '/work/:id?',
+      name: 'Work',
+      component: Work,
       meta: {
-        title: 'Works | Works by Decade'
+        title: 'Work | Work of a Decade'
       }
       // params: true
     }

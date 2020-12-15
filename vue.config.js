@@ -17,7 +17,7 @@ module.exports = {
             filename: 'index.html',
             // when using title option,
             // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-            title: 'Works by Decade',
+            title: 'Work of a Decade',
             // chunks to include on this page, by default includes
             // extracted common chunks and vendor chunks.
             chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -29,5 +29,9 @@ module.exports = {
     //         'jquery': 'jQuery'
     //     }
     // },
-    publicPath: './'
+    // devServer: {
+    //     historyApiFallback: true
+    // },
+    // publicPath: './'
+    publicPath: process.env.NODE_ENV === 'production' ? '/work10/' : '/'
 }

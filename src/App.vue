@@ -10,18 +10,18 @@
         <Aside v-show="currentPage == 'index'" />
       </transition>
 
-      <transition name="fade">
-        <router-link v-show="currentPage != 'index'" to="/" class="back text-hide" title="Back to Home">Home</router-link>
-      </transition>
+      <!-- <transition name="fade"> -->
+      <router-link v-show="currentPage != 'index'" to="/" class="back text-hide" title="Back to Home">Home</router-link>
+      <!-- </transition> -->
 
     </div>
   </div>
 </template>
 
 <script>
-import Aside from './components/Aside.vue'
 
-// import Vue from 'vue'
+import Aside from './components/Aside.vue'
+import Vue from 'vue'
 
 export default {
   name: 'App',
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       mode: { light: true },
-      currentPage:  null,
+      currentPage:  'null',
       // Scrollbar: null
     }
   },
@@ -47,6 +47,15 @@ export default {
   methods: {
     checkCurrentPage() {
       this.currentPage = this.$route.name.toLowerCase();
+      if (this.currentPage !== 'work') {
+        var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
+        Vue.$animeJS({
+          targets:    scrollElement,
+          scrollTop:  0,
+          duration:   750,
+          easing:   'easeInOutSine'
+        });
+      }
       // this.currentPage = this.$route.name;
       // console.log(this.currentPage);
       // document.getElementById('page-' + this.currentPage).classList.add('page-intro');
@@ -66,7 +75,7 @@ export default {
           // contentHeight   = document.querySelector('.list').offsetHeight;
           // console.log(contentHeight);
 
-      if (windowWidth >= 1200 && bodyHeight > sidebarHeight && this.currentPage == 'works' && ( windowPos + windowHeight - parseInt(bodyPaddingTop) ) >= sidebarHeight) {
+      if (windowWidth >= 1200 && bodyHeight > sidebarHeight && (this.currentPage == 'work' || this.currentPage == 'about') && ( windowPos + windowHeight - parseInt(bodyPaddingTop) ) >= sidebarHeight) {
         sidebar.style.position = 'fixed';
         sidebar.style.bottom   = sidebarHeight > windowHeight ? 0 : 'auto';
       } else {
@@ -88,14 +97,16 @@ export default {
     // }); // , options
   },
   watch: {
-    $route(to, from) { // to, from
-      console.log('to: ');
-      console.log(to);
-      console.log('from: ');
-      console.log(from);
+    $route() { // to, from
+      // console.log('to: ');
+      // console.log(to);
+      // console.log('from: ');
+      // console.log(from);
       this.checkCurrentPage();
       // document.getElementsByClassName('page-intro')[0].classList.remove('page-intro');
+      // console.log(to.params.id);
       // if (typeof(to.params.id) !== 'undefined' && to.params.id !== '') {
+      // if (typeof(to.params.id) == 'undefined' || to.params.id == '') {
       //   var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
       //   Vue.$animeJS({
       //     targets:    scrollElement,
@@ -138,7 +149,11 @@ body {
 a, a:hover {
   color: $primary-color;
   text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  // transition: .25s;
 }
+
+// a:hover {opacity: 0.5;}
 
 ul, li {
   margin: 0;

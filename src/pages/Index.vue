@@ -1,6 +1,7 @@
 <template>
   <div id="page-index" class="page">
-    <div class="background" v-bind:style="{'background-image': 'url(' + require('@/assets/images/home/' + backgroundId + '.jpg') + ')'}"></div>
+    <div class="background-desktop" v-bind:style="{'background-image': 'url(' + require('@/assets/images/home/desktop-' + backgroundId + '.jpg') + ')'}"></div>
+    <div class="background-mobile" v-bind:style="{'background-image': 'url(' + require('@/assets/images/home/mobile-' + backgroundId + '.jpg') + ')'}"></div>
   </div>
 </template>
 
@@ -16,7 +17,6 @@ export default {
   },
   mounted() {
     this.backgroundId = (Math.floor(Math.random() * 7) + 1);
-    console.log(this.backgroundId);
   }
 }
 </script>
@@ -28,7 +28,8 @@ export default {
 
   padding-bottom: 0;
 
-  .background {
+  .background-desktop,
+  .background-mobile {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,9 +38,24 @@ export default {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     min-height: 100%;
-    background: url(../assets/images/home/1.jpg) #000 center center no-repeat;
+    background: url(../assets/images/home/desktop-1.jpg) #000 center center no-repeat;
     background-size: cover;
     z-index: -1;
+  }
+
+  .background-desktop {
+    display: none;
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  .background-mobile {
+    transform: translate3d(0, 0, 0);
+    background-image: url(../assets/images/home/mobile-1.jpg);
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
 }

@@ -1,12 +1,12 @@
 <template>
   <div id="page-works" class="page">
-    <h2 v-if="!this.$route.params.id">Works</h2>
-    <h2 v-else><router-link to="/works">Works</router-link></h2>
+    <h2 v-if="!this.$route.params.id">Work</h2>
+    <h2 v-else><router-link to="/work">Work</router-link></h2>
     <transition name="fade">
       <div class="list" v-if="!this.$route.params.id">
         <ul>
           <li v-for="(item, index) in portfolio" v-bind:key="index" v-bind:style="{'transition-delay': (0.1 * index) + 's'}">
-            <router-link :to="{ name: 'Works', params: { id: item.id } }">
+            <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name">
               <div class="thumbnail">
                 <img :src="item.thumbnail">
               </div>
@@ -28,7 +28,7 @@
         </div>
         <div class="media">
           <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
-            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" :src="getImageUrl('images/works/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
+            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" :src="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
             <div class="embed" v-html="item" v-else></div>
           </div>
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
@@ -46,7 +46,7 @@
 import Footer from '../components/Footer.vue'
 
 export default {
-  name: 'Works',
+  name: 'Work',
   components: {
     Footer
   },
@@ -132,7 +132,13 @@ export default {
     getCurrentId() {
       return this.$route.params.id - 1;
     }
-  }
+  },
+  // mounted() {
+  //   var sidebar = document.querySelector('#sidebar');
+  //   console.log(sidebar.scrollHeight);
+  //   var list = document.querySelector('.list');
+  //   console.log(document.body.contains(list));
+  // }
 }
 </script>
 
@@ -156,7 +162,7 @@ export default {
     padding-bottom: 75px;
     box-sizing: border-box;
     @media (min-width: $screen-md) { padding-top: 57px; }
-    @media (min-width: $screen-lg) { max-width: 860px; min-height: (150vh); }
+    @media (min-width: $screen-lg) { max-width: 860px; }
     @media (min-width: $screen-2xl) { max-width: 1320px; }
     ul {
       font-size: 0;
@@ -188,9 +194,28 @@ export default {
       a { display: block }
       .thumbnail {
         position: relative;
+        padding-top: 100%;
+        background: #f6f6f6;
+        overflow: hidden;
         img {
+          position: absolute;
+          top: 0;
+          left: 0;
           display: block;
           width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 1;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+          animation: thumbnail-animation 2s infinite;
         }
         &::after {
           display: none;
@@ -372,6 +397,15 @@ export default {
       }
     }
 
+  }
+
+  @keyframes thumbnail-animation {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 100%;
+    }
   }
 
 }

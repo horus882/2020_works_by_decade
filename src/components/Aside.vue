@@ -1,28 +1,28 @@
 <template>
   <aside id="sidebar">
     <h1>
-      <router-link to="/">Works<br>by Decade</router-link>
+      <router-link to="/">Work of a <br>Decade</router-link>
     </h1>
     <p class="description">
-      The Protfolio in M’ORANGE<br>by Huang Yi Kai, 2010-2020
+      Portfolio of HUANG YI KAI <br>
+      at M’ORANGE, 2010-2020
     </p>
     <nav>
       <ul>
         <li>
-          <router-link to="/works">Works</router-link>
+          <router-link to="/work">Work</router-link>
         </li>
         <li>
           <router-link to="/about">About</router-link>
         </li>
-        <!--
-        <li><router-link to="/works/77">Works 77</router-link></li>
-        <li><router-link :to="{name: 'Works', params: {id: 77}}">Works 77</router-link></li>
-        -->
       </ul>
     </nav>
     <p class="text">
-      Huang Yi Kai. <br>
-      He was born in Tainan in 1986. He lives in Taipei currently. Ever since remembered, he was strongly affected by his parents’ passion for taking pictures when he was young; thus, he acquires a habit of photography. After using film camera, he begins to learn to observe things in detail, to capture both the warmth of the fleeting scenes and the real scenes before his very eyes. In 2012 he formed “The Boy’s Holiday Committee” with two of his friends. In 2013 they published "Sakyoto daily day-off" with Kyoto scenes as the main topic. In 2015 they published "Douou daily-day off" with traveling to Sapporo as topic. While having extensive experience, he participates in many different activities increasingly. <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
+      Huang Yi Kai.<br>
+      <br>
+      The Taiwanese designer was born in Tainan in 1968 and currently resides in Taipei City. He has been with M’ORANGE, a digital consulting service, for ten years, ever since finishing school. He has worked with numerous clients, building a portfolio of a wide variety of projects and visual styles. He works with uncompromising insistence on authenticity, holding firm the belief that “good design” can change a society. Passing down tenets of good practices, he hopes to help shape design culture. <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
+      <!-- Huang Yi Kai. <br>
+      He was born in Tainan in 1986. He lives in Taipei currently. Ever since remembered, he was strongly affected by his parents’ passion for taking pictures when he was young; thus, he acquires a habit of photography. After using film camera, he begins to learn to observe things in detail, to capture both the warmth of the fleeting scenes and the real scenes before his very eyes. In 2012 he formed “The Boy’s Holiday Committee” with two of his friends. In 2013 they published "Sakyoto daily day-off" with Kyoto scenes as the main topic. In 2015 they published "Douou daily-day off" with traveling to Sapporo as topic. While having extensive experience, he participates in many different activities increasingly. <img v-bind:src="require('@/assets/images/cross.svg')" width="12"> -->
     </p>
     <Footer />
   </aside>
