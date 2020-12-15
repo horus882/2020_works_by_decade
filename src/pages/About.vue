@@ -5,7 +5,6 @@
       <h3>Introduction</h3>
       <p class="text">
         Huang Yi Kai.<br>
-        <br>
         The Taiwanese designer was born in Tainan in 1968 and currently resides in Taipei City. He has been with M’ORANGE, a digital consulting service, for ten years, ever since finishing school. He has worked with numerous clients, building a portfolio of a wide variety of projects and visual styles.   Responding to client needs and working within market limitations, Yi Kai constructs balanced solutions without compromising the intrinsic value of his designs. To meet the different challenges of various market trends and client requests, he provides services that include not only website design, but also graphic design, visual conceptualization, exhibit coordination, artistic direction, and more. <br>
         <br>
         He works with utmost insistence on authenticity, holding firm the belief that “good design” can change a society. Passing down tenets of good practices, he hopes to help shape design culture.<br>

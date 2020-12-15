@@ -5,6 +5,9 @@ import VueRouter from 'vue-router'
 import VueAnime from './vue-anime';
 Vue.use(VueAnime);
 
+// import { plugin as OnLoad } from 'vue-onload'
+// Vue.use(OnLoad);
+
 import Index from './pages/Index'
 import About from './pages/About'
 import Work from './pages/Work'

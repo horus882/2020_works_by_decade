@@ -8,7 +8,7 @@
           <li v-for="(item, index) in portfolio" v-bind:key="index" v-bind:style="{'transition-delay': (0.1 * index) + 's'}">
             <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name">
               <div class="thumbnail">
-                <img :src="item.thumbnail">
+                <img :class="{loading: !item.thumbnail.loaded}" :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)">
               </div>
               <div class="info">
                 <p class="name">{{ item.name }}</p>
@@ -60,7 +60,7 @@ export default {
           name:       'Nike Free',
           year:       2011,
           type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  'https://fakeimg.pl/400x400/',
+          thumbnail:  { src: 'https://picsum.photos/2000/2000/', loaded: false },
           folder:     'sample',
           media:      ['loading.gif', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'],
           info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
@@ -70,7 +70,7 @@ export default {
           name:       'kiann',
           year:       2019,
           type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  'https://fakeimg.pl/400x400/',
+          thumbnail:  { src: 'https://picsum.photos/2500/2500/', loaded: false },
           folder:     'kiann',
           media:      [
             '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>',
@@ -131,6 +131,12 @@ export default {
     },
     getCurrentId() {
       return this.$route.params.id - 1;
+    },
+    thumbnailLoaded(index) {
+      var result = this.portfolio.filter(function(item) {
+        return item.id == index;
+      });
+      result[0].thumbnail.loaded = true;
     }
   },
   // mounted() {
@@ -206,6 +212,10 @@ export default {
           height: 100%;
           object-fit: cover;
           opacity: 1;
+          transition: opacity .3s;
+          &.loading {
+            opacity: 0;
+          }
         }
         &::before {
           content: '';
@@ -215,7 +225,7 @@ export default {
           width: 50%;
           height: 100%;
           background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
-          animation: thumbnail-animation 2s infinite;
+          animation: thumbnail-animation 1.5s infinite;
         }
         &::after {
           display: none;
