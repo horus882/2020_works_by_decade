@@ -222,10 +222,10 @@ export default {
           position: absolute;
           top: 0;
           left: 0;
-          width: 50%;
+          width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
-          animation: thumbnail-animation 1.5s infinite;
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+          animation: thumbnail-animation 1.75s infinite;
         }
         &::after {
           display: none;
@@ -411,7 +411,7 @@ export default {
 
   @keyframes thumbnail-animation {
     0% {
-      left: -50%;
+      left: -100%;
     }
     100% {
       left: 100%;
