@@ -7,8 +7,8 @@
         <ul>
           <li v-for="(item, index) in portfolio" v-bind:key="index" v-bind:style="{'transition-delay': (0.1 * index) + 's'}">
             <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name">
-              <div class="thumbnail">
-                <img :class="{loading: !item.thumbnail.loaded}" :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)">
+              <div :class="{loading: !item.thumbnail.loaded}" class="thumbnail">
+                <img :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)">
               </div>
               <div class="info">
                 <p class="name">{{ item.name }}</p>
@@ -213,19 +213,9 @@ export default {
           object-fit: cover;
           opacity: 1;
           transition: opacity .3s;
-          &.loading {
-            opacity: 0;
-          }
-        }
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
-          animation: thumbnail-animation 1.75s infinite;
+          // &.loading {
+          //   opacity: 0;
+          // }
         }
         &::after {
           display: none;
@@ -238,6 +228,21 @@ export default {
           background: url(../assets/images/slash.svg) center center no-repeat;
           background-size: contain;
           transform: translate(-50%, -50%);
+        }
+        &.loading {
+          img {
+            opacity: 0;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+            animation: thumbnail-animation 1.75s infinite;
+          }
         }
       }
       @media not all and (hover: none) {
