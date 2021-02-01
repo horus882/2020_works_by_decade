@@ -97,12 +97,20 @@ export default {
     // }); // , options
   },
   watch: {
-    $route() { // to, from
+    $route(to) { // to, from
       // console.log('to: ');
       // console.log(to);
       // console.log('from: ');
-      // console.log(from);
       this.checkCurrentPage();
+      if (to.name == 'Work' && typeof(to.params.id) !== 'undefined') {
+        var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
+        Vue.$animeJS({
+          targets:    scrollElement,
+          scrollTop:  0,
+          duration:   750,
+          easing:   'easeInOutSine'
+        });
+      }
       // document.getElementsByClassName('page-intro')[0].classList.remove('page-intro');
       // console.log(to.params.id);
       // if (typeof(to.params.id) !== 'undefined' && to.params.id !== '') {

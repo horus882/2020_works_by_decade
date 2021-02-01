@@ -8,7 +8,8 @@
           <li v-for="(item, index) in portfolio" v-bind:key="index" v-bind:style="{'transition-delay': (0.1 * index) + 's'}">
             <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name">
               <div :class="{loading: !item.thumbnail.loaded}" class="thumbnail">
-                <img :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)">
+                <!-- <img :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)"> -->
+                <img :src="getImageUrl('images/work/' + item.folder + '/cover.jpg')" v-on:load="thumbnailLoaded(item.id)">
               </div>
               <div class="info">
                 <p class="name">{{ item.name }}</p>
@@ -34,7 +35,7 @@
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
         </div>
         <div class="info">
-          <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/→/g, '<i></i>')"></p>
+          <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/:/g, '<i></i>')"></p>
         </div>
         <Footer />
       </div>
@@ -57,27 +58,267 @@ export default {
       portfolio:    [
         {
           id:         1,
-          name:       'Nike Free',
-          year:       2011,
-          type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  { src: 'https://picsum.photos/2000/2000/', loaded: false },
-          folder:     'sample',
-          media:      ['loading.gif', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'],
-          info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
+          name:       'Kiânn Official Site',
+          year:       2020,
+          type:       'Website',
+          thumbnail:  { loaded: false },
+          folder:     '2020_kiann_01',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg'],
+          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Project Manager : Kevin Chen、Welson Hsiao<br>Website Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh、Leo Lin'
         },
         {
           id:         2,
-          name:       'kiann',
-          year:       2019,
-          type:       'Graphic Design / Hand Write / Photography',
-          thumbnail:  { src: 'https://picsum.photos/2500/2500/', loaded: false },
-          folder:     'kiann',
-          media:      [
-            '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>',
-            '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg'
-          ],
-          info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
+          name:       'Kiânn Official Site Intro : Let’s Kiann',
+          year:       2020,
+          type:       'Concept / Storyboard / Motionboard / Art & Graphic',
+          thumbnail:  { loaded: false },
+          folder:     '2020_kiann_02',
+          media:      ['<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.jpg','04.jpg','05.gif','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg'],
+          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Website Designer : Huang Yi Kai<br>Animation Director : Tubo Lee<br>Project Manager : Akasha Wu<br>Cel animation : Szyu Pan<br>Motion Design :  Tubo Lee / Toastwo Creative<br>Music & Sound Design : Co-op Works'
         },
+        {
+          id:         3,
+          name:       'Tefal New Gourmet Wave Key Visual',
+          year:       2019,
+          type:       'Key Visual / Typography',
+          thumbnail:  { loaded: false },
+          folder:     '2019_tefal_01',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
+          info:       'Client : Tefal Taiwan<br>Agency : M’ORANGE<br>Project Manager : Sinia Peng、Elena Hu<br>Key Visual Designer : Huang Yi Kai<br>Website Designer : Aju Tsai<br>Developer : Clouder Wang、Leo Lin'
+        },
+        {
+          id:         4,
+          name:       'Yuan Launch Campaign',
+          year:       2019,
+          type:       '(Proposed Design) Website',
+          thumbnail:  { loaded: false },
+          folder:     '2019_yuan_01',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
+          info:       'Client : Yuan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Erik Huang<br>Creative : Jacky Wen、Muji Lin、Zoi Hung<br>Designer : Huang Yi Kai'
+        },
+        {
+          id:         5,
+          name:       'M’ORANGE Annual Briefing Key Visual',
+          year:       2019,
+          type:       'Graphic',
+          thumbnail:  { loaded: false },
+          folder:     '2019_morange_01',
+          media:      ['01.jpg','02.jpg','03.jpg'],
+          info:       'Agency : M’ORANGE<br>Creative : Jacky Wen<br>Designer : Huang Yi Kai<br>Animation Design : Eia Hung<br>Project Specialist : Kate Lin'
+        },
+        {
+          id:         6,
+          name:       'M’ORANGE Christmas Greeting Card',
+          year:       2019,
+          type:       'Graphic / Photography / Handwriting',
+          thumbnail:  { loaded: false },
+          folder:     '2019_morange_02',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
+          info:       'Agency : M’ORANGE<br>Creative : Jacky Wen<br>Designer : Huang Yi Kai<br>Project Specialist : Kate Lin<br>Model : Naomi Hsieh<br>Project Specialist : Kate Lin'
+        },
+        {
+          id:         7,
+          name:       'Kirin Hyoketsu Landing Page',
+          year:       2018,
+          type:       'Website',
+          thumbnail:  { loaded: false },
+          folder:     '2018_kirin_01',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg'],
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen、Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Shine Cheng'
+        },
+        {
+          id:         8,
+          name:       'Kirin Travel Hyoketsu Campaign',
+          year:       2018,
+          type:       'Website / Typography / Handwriting',
+          thumbnail:  { loaded: false },
+          folder:     '2018_kirin_02',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg'],
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen、Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh'
+        },
+        {
+          id:         9,
+          name:       'Kirin Gogotea Photography',
+          year:       2018,
+          type:       'Photography / Handwriting',
+          thumbnail:  { loaded: false },
+          folder:     '2018_kirin_03',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Photographer : Huang Yi Kai<br>Hand Writing : Huang Yi Kai<br>Model : Stephanie Su、Urania Chiu'
+        },
+        {
+          id:         10,
+          name:       'New Balance Campus Relay Campaign',
+          year:       2018,
+          type:       '(Proposed Design) Key Visual Mockup / Typography / Package Design',
+          thumbnail:  { loaded: false },
+          folder:     '2018_nb_01',
+          media:      ['01.jpg','02.jpg','03.gif','04.jpg','05.jpg','06.jpg'],
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、Erik Huang<br>Creative : Jacky Wen、Muji Lin、Zoi Hung<br>Designer : Huang Yi Kai<br>Public Relations : Monica Chen、Flora Huang'
+        },
+        // {
+        //   id:         11,
+        //   name:       'New Balance Campus Relay Campaign',
+        //   year:       2017,
+        //   type:       'Website / Typography',
+        //   thumbnail:  { src: 'https://picsum.photos/814/814/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Elaine Lin<br>Creative : Jacky Wen、Muji Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh、Eia Hung<br>Public Relations : Monica Chen、Flora Huang<br>Project Specialist : Kate Lin<br>Production Studio : Lion Flying Production'
+        // },
+        // {
+        //   id:         12,
+        //   name:       'New Balance Official Site',
+        //   year:       2017,
+        //   type:       'Website',
+        //   thumbnail:  { src: 'https://picsum.photos/810/810/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen、Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Shine Cheng'
+        // },
+        // {
+        //   id:         13,
+        //   name:       'New Balance 247 Campaign',
+        //   year:       2017,
+        //   type:       'Website / Element / Handwriting / Typography / OOH / Event Materials / Printed Materials',
+        //   thumbnail:  { src: 'https://picsum.photos/800/800/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、Jason Lin<br>Creative : Jacky Wen、Muji Lin、Pika Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung<br>OOH Modeling Designer : Lackers Lee<br>Project Specialist : Kate Lin<br>Photographer : Rooster Chen'
+        // },
+        // {
+        //   id:         14,
+        //   name:       'MUJI Skin Care Campaign',
+        //   year:       2017,
+        //   type:       'Website / Illustration',
+        //   thumbnail:  { src: 'https://picsum.photos/802/802/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : MUJI Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jason Lin<br>Creative : Ron Yang、Pulan Chen<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung'
+        // },
+        // {
+        //   id:         15,
+        //   name:       'Macro Maison Official Site',
+        //   year:       2016,
+        //   type:       'Website / Backdrop & Scene Design',
+        //   thumbnail:  { src: 'https://picsum.photos/804/804/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Macro Maison<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Kevin Chen<br>Creative : Jacky Wen、Muji Lin<br>Design Director : Celia Cheng<br>Website Designer : Celia Cheng、Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh<br>Backdrop Design : Huang Yi Kai'
+        // },
+        // {
+        //   id:         16,
+        //   name:       'Kirin GoGoTea ”30 Days of Little Luxury” Campaign',
+        //   year:       2016,
+        //   type:       'Graphic / Photography / Exhibition',
+        //   thumbnail:  { src: 'https://picsum.photos/806/806/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、GK Wang<br>Creative : Josephine Lin<br>Designer : Huang Yi Kai<br>Photographer : Huang Yi Kai'
+        // },
+        // {
+        //   id:         17,
+        //   name:       'Kirin GoGoTea Autumn Special Recipe Video',
+        //   year:       2016,
+        //   type:       'Typography',
+        //   thumbnail:  { src: 'https://picsum.photos/808/808/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、GK Wang<br>Creative : Josephine Lin<br>Designer : Huang Yi Kai<br>Model : Blaza Chen<br>Film Director : Webber Lee<br>Space : Afterhours café'
+        // },
+        // {
+        //   id:         18,
+        //   name:       'Kirin GoGoTea Lucky Draw Campaign',
+        //   year:       2016,
+        //   type:       'Website',
+        //   thumbnail:  { src: 'https://picsum.photos/812/812/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen<br>Designer : Huang Yi Kai<br>Developer : Rick Ma'
+        // },
+        // {
+        //   id:         19,
+        //   name:       'Audi A4 Launch Campaign',
+        //   year:       2016,
+        //   type:       'Website / Printed Materials',
+        //   thumbnail:  { src: 'https://picsum.photos/814/814/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Joyce Huang、Mia Chen<br>Creative : Jacky Wen、Esther Su<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung<br>Public Relations : Monica Chen'
+        // },
+        // {
+        //   id:         20,
+        //   name:       'Audi Features of the A6 & S8',
+        //   year:       2016,
+        //   type:       'Layout',
+        //   thumbnail:  { src: 'https://picsum.photos/805/805/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Joyce Huang<br>Designer : Huang Yi Kai'
+        // },
+        // {
+        //   id:         21,
+        //   name:       'Adidas Women Training Campaign',
+        //   year:       2015,
+        //   type:       'Website / Visual / Typography',
+        //   thumbnail:  { src: 'https://picsum.photos/802/802/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Adidas Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、Elaine Lin<br>Creative : Josephine Lin、Fish Chang、Ming Gao<br>Design Director : Celia Cheng<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Shine Cheng、Chiou Chu'
+        // },
+        // {
+        //   id:         22,
+        //   name:       'Audi A3 Launch Campaign',
+        //   year:       2013,
+        //   type:       'Website',
+        //   thumbnail:  { src: 'https://picsum.photos/820/820/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Joyce Huang<br>Creative : Jacky Wen<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung'
+        // },
+        // {
+        //   id:         23,
+        //   name:       'M’ORANGE Christmas Greeting Project',
+        //   year:       2013,
+        //   type:       'Graphic / Chalk Drawing',
+        //   thumbnail:  { src: 'https://picsum.photos/818/818/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Agency : M’ORANGE<br>Designer : Huang Yi Kai<br>Blackboard Painter : Celia Cheng、Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung<br>Project Specialist : Kate Lin'
+        // },
+        // {
+        //   id:         24,
+        //   name:       'Nike free illustration',
+        //   year:       2011,
+        //   type:       '(Design Based on Nike Corporate Materials / Proposed Design) Illustration',
+        //   thumbnail:  { src: 'https://picsum.photos/816/816/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Client : Nike Taiwan<br>Agency : M’ORANGE<br>Design Director : Celia Cheng<br>Designer : Huang Yi Kai'
+        // },
+        // {
+        //   id:         25,
+        //   name:       'M’ORANGE Internal Worksop',
+        //   year:       2010,
+        //   type:       'Graphic / Photography / Typography',
+        //   thumbnail:  { src: 'https://picsum.photos/814/814/', loaded: false },
+        //   folder:     'sample',
+        //   media:      ['1.jpg'],
+        //   info:       'Agency : M’ORANGE<br>Creative : Huang Yi Kai<br>Designer : Huang Yi Kai'
+        // },
+        // {
+        //   id:         2,
+        //   name:       'kiann',
+        //   year:       2019,
+        //   type:       'Graphic Design / Hand Write / Photography',
+        //   thumbnail:  { src: 'https://picsum.photos/2500/2500/', loaded: false },
+        //   folder:     'kiann',
+        //   media:      [
+        //     '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>',
+        //     '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg'
+        //   ],
+        //   info:       'Client → New Balance<br>Co-Designer → Celia<br>Motion Design → Lackers'
+        // },
         // {
         //   id:         3,
         //   name:       '與世界一起 Cheers！｜KIRIN 冰結旅途',
@@ -179,7 +420,7 @@ export default {
     }
     li {
       display: inline-block;
-      width: 50%;
+      width: 100%;
       font-size: 13px;
       vertical-align: top;
       margin-bottom: 20px;
@@ -190,6 +431,9 @@ export default {
       transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
       // &:nth-of-type(odd) { padding-right: 10px; }
       // &:nth-of-type(even) { padding-left: 10px; }
+      @media (min-width: 480px) {
+        width: 50%;
+      }
       @media (min-width: $screen-md) {
         padding: 0 30px;
         margin-bottom: 50px;
