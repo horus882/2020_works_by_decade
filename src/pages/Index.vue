@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    this.backgroundId = (Math.floor(Math.random() * 7) + 1);
+    this.backgroundId = (Math.floor(Math.random() * 8) + 1);
   }
 }
 </script>
