@@ -64,7 +64,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2020_kiann_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg'],
-          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Project Manager : Kevin Chen、Welson Hsiao<br>Website Designer : Huang Yi Kai<br>Developer : Clouder Wang、Leo Lin、Brent Hsieh'
+          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Project Manager : Kevin Chen, Welson Hsiao<br>Website Designer : Huang Yi Kai<br>Developer : Clouder Wang, Leo Lin, Brent Hsieh'
         },
         {
           id:         2,
@@ -84,7 +84,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2019_tefal_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
-          info:       'Client : Tefal Taiwan<br>Agency : M’ORANGE<br>Project Manager : Sinia Peng、Elena Hu<br>Key Visual Designer : Huang Yi Kai<br>Website Designer : Aju Tsai<br>Developer : Clouder Wang、Leo Lin'
+          info:       'Client : Tefal Taiwan<br>Agency : M’ORANGE<br>Project Manager : Sinia Peng, Elena Hu<br>Key Visual Designer : Huang Yi Kai<br>Website Designer : Aju Tsai<br>Developer : Clouder Wang, Leo Lin'
         },
         {
           id:         4,
@@ -94,7 +94,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2019_yuan_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
-          info:       'Client : Yuan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Erik Huang<br>Creative : Jacky Wen、Muji Lin、Zoi Hung<br>Designer : Huang Yi Kai'
+          info:       'Client : Yuan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho, Erik Huang<br>Creative : Jacky Wen, Muji Lin, Zoi Hung<br>Designer : Huang Yi Kai'
         },
         {
           id:         5,
@@ -124,7 +124,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2018_kirin_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg'],
-          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen、Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Shine Cheng'
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen, Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Shine Cheng'
         },
         {
           id:         8,
@@ -134,7 +134,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2018_kirin_02',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg'],
-          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen、Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh'
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen, Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Brent Hsieh'
         },
         {
           id:         9,
@@ -144,7 +144,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2018_kirin_03',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
-          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Photographer : Huang Yi Kai<br>Hand Writing : Huang Yi Kai<br>Model : Stephanie Su、Urania Chiu'
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Photographer : Huang Yi Kai<br>Hand Writing : Huang Yi Kai<br>Model : Stephanie Su, Urania Chiu'
         },
         {
           id:         10,
@@ -154,7 +154,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2018_nb_01',
           media:      ['01.jpg','02.jpg','03.gif','04.jpg','05.jpg','06.jpg'],
-          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、Erik Huang<br>Creative : Jacky Wen、Muji Lin、Zoi Hung<br>Designer : Huang Yi Kai'
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, Erik Huang<br>Creative : Jacky Wen, Muji Lin, Zoi Hung<br>Designer : Huang Yi Kai'
         },
         {
           id:         11,
@@ -164,7 +164,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2017_nb_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','<div style="padding:42.12% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/503421892?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg'],
-          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Elaine Lin<br>Creative : Jacky Wen、Muji Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh、Eia Hung<br>Public Relations : Monica Chen、Flora Huang<br>Project Specialist : Kate Lin<br>Production Studio : Lion Flying Production'
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho, Elaine Lin<br>Creative : Jacky Wen, Muji Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Brent Hsieh, Eia Hung<br>Public Relations : Monica Chen, Flora Huang<br>Project Specialist : Kate Lin<br>Production Studio : Lion Flying Production'
         },
         {
           id:         12,
@@ -174,7 +174,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2017_nb_02',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg'],
-          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen、Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Shine Cheng'
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen, Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Shine Cheng'
         },
         {
           id:         13,
@@ -184,7 +184,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2017_nb_03',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.gif','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg'],
-          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、Jason Lin<br>Creative : Jacky Wen、Muji Lin、Pika Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung<br>OOH Modeling Designer : Lackers Lee<br>Project Specialist : Kate Lin<br>Photographer : Rooster Chen'
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, Jason Lin<br>Creative : Jacky Wen, Muji Lin, Pika Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Eia Hung<br>OOH Modeling Designer : Lackers Lee<br>Project Specialist : Kate Lin<br>Photographer : Rooster Chen'
         },
         {
           id:         14,
@@ -194,7 +194,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2017_muji_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg'],
-          info:       'Client : MUJI Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jason Lin<br>Creative : Ron Yang、Pulan Chen<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung'
+          info:       'Client : MUJI Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jason Lin<br>Creative : Ron Yang, Pulan Chen<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Eia Hung'
         },
         {
           id:         15,
@@ -204,7 +204,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2016_macromaison_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.gif','08.jpg','09.gif','10.jpg','11.jpg','12.jpg','13.jpg'],
-          info:       'Client : Macro Maison<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Kevin Chen<br>Creative : Jacky Wen、Muji Lin<br>Design Director : Celia Cheng<br>Website Designer : Celia Cheng、Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh<br>Backdrop Design : Huang Yi Kai'
+          info:       'Client : Macro Maison<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Kevin Chen<br>Creative : Jacky Wen, Muji Lin<br>Design Director : Celia Cheng<br>Website Designer : Celia Cheng, Huang Yi Kai<br>Developer : Clouder Wang, Brent Hsieh<br>Backdrop Design : Huang Yi Kai'
         },
         {
           id:         16,
@@ -214,7 +214,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2016_kirin_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg'],
-          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、GK Wang<br>Creative : Josephine Lin<br>Designer : Huang Yi Kai<br>Photographer : Huang Yi Kai'
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, GK Wang<br>Creative : Josephine Lin<br>Designer : Huang Yi Kai<br>Photographer : Huang Yi Kai'
         },
         {
           id:         17,
@@ -224,7 +224,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2016_kirin_02',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg'],
-          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、GK Wang<br>Creative : Josephine Lin<br>Designer : Huang Yi Kai<br>Model : Blaza Chen<br>Film Director : Webber Lee<br>Space : Afterhours café'
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, GK Wang<br>Creative : Josephine Lin<br>Designer : Huang Yi Kai<br>Model : Blaza Chen<br>Film Director : Webber Lee<br>Space : Afterhours café'
         },
         {
           id:         18,
@@ -244,7 +244,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2016_audi_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg'],
-          info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Joyce Huang、Mia Chen<br>Creative : Jacky Wen、Esther Su<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung<br>Public Relations : Monica Chen'
+          info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho, Joyce Huang, Mia Chen<br>Creative : Jacky Wen, Esther Su<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Eia Hung<br>Public Relations : Monica Chen'
         },
         {
           id:         20,
@@ -264,7 +264,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2015_adidas_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg'],
-          info:       'Client : Adidas Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih、Jessy Ho、Elaine Lin<br>Creative : Josephine Lin、Fish Chang、Ming Gao<br>Design Director : Celia Cheng<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Shine Cheng、Chiou Chu'
+          info:       'Client : Adidas Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, Elaine Lin<br>Creative : Josephine Lin, Fish Chang, Ming Gao<br>Design Director : Celia Cheng<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Shine Cheng, Chiou Chu'
         },
         {
           id:         22,
@@ -274,7 +274,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2013_audi_01',
           media:      ['01.gif','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg'],
-          info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Joyce Huang<br>Creative : Jacky Wen<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung'
+          info:       'Client : Audi Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho, Joyce Huang<br>Creative : Jacky Wen<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Eia Hung'
         },
         {
           id:         23,
@@ -284,7 +284,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2013_morange_01',
           media:      ['01.jpg','<div style="padding:51.52% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/499195879?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','03.jpg','04.jpg','05.jpg'],
-          info:       'Agency : M’ORANGE<br>Designer : Huang Yi Kai<br>Blackboard Painter : Celia Cheng、Huang Yi Kai<br>Developer : Clouder Wang、Eia Hung<br>Project Specialist : Kate Lin'
+          info:       'Agency : M’ORANGE<br>Designer : Huang Yi Kai<br>Blackboard Painter : Celia Cheng, Huang Yi Kai<br>Developer : Clouder Wang, Eia Hung<br>Project Specialist : Kate Lin'
         },
         {
           id:         24,
@@ -354,9 +354,9 @@ export default {
     width: 100%;
     text-align: left;
     padding-top: 36px;
-    padding-bottom: 75px;
+    padding-bottom: 30px;
     box-sizing: border-box;
-    @media (min-width: $screen-md) { padding-top: 57px; }
+    @media (min-width: $screen-md) { padding-top: 57px; padding-bottom: 75px; }
     @media (min-width: $screen-lg) { max-width: 860px; }
     @media (min-width: $screen-2xl) { max-width: 1320px; }
     ul {
@@ -502,7 +502,9 @@ export default {
 
     position: absolute;
     padding-top: 6px;
-    padding-bottom: 75px;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-md) { padding-bottom: 75px; }
 
     .head {
       margin-bottom: 40px;

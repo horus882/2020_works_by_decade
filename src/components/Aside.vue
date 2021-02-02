@@ -50,7 +50,11 @@ aside {
   left: 0;
   width: 100%;
   height: auto;
-  padding-bottom: 75px;
+  padding-bottom: 30px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 75px;
+  }
 
   @media (min-width: $screen-lg) {
     position: relative;

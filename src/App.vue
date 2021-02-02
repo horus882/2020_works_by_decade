@@ -121,10 +121,10 @@ html {overflow-y: scroll;}
 
 body {
   margin: 0;
-  padding: 75px 30px;
+  padding: 75px 30px 30px;
   // background-color: #e5e5e5;
   // @media (min-width: $screen-md) { padding: 73px 80px; }
-  @media (min-width: $screen-md) { padding: 76px 80px; }
+  @media (min-width: $screen-md) { padding: 76px 80px 75px; }
   @media (min-width: $screen-lg) { padding-right: 0; }
 }
 
