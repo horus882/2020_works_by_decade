@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-bind:class="{'light': mode.light}">
-    <div id="main" v-bind:class="currentPage"> <!-- v-bind:class="currentPage" -->
+    <div id="main" v-bind:class="currentPage">
 
       <transition name="fade">
         <router-view></router-view>
@@ -47,18 +47,6 @@ export default {
   methods: {
     checkCurrentPage() {
       this.currentPage = this.$route.name.toLowerCase();
-      if (this.currentPage !== 'work') {
-        var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
-        Vue.$animeJS({
-          targets:    scrollElement,
-          scrollTop:  0,
-          duration:   750,
-          easing:   'easeInOutSine'
-        });
-      }
-      // this.currentPage = this.$route.name;
-      // console.log(this.currentPage);
-      // document.getElementById('page-' + this.currentPage).classList.add('page-intro');
     },
     resizeAndScroll() {
 
@@ -98,31 +86,17 @@ export default {
   },
   watch: {
     $route(to) { // to, from
-      // console.log('to: ');
-      // console.log(to);
-      // console.log('from: ');
       this.checkCurrentPage();
-      if (to.name == 'Work' && typeof(to.params.id) !== 'undefined') {
+      if ((to.name == 'Work' && typeof(to.params.id) !== 'undefined') || to.name != 'Work') {
         var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
         Vue.$animeJS({
           targets:    scrollElement,
           scrollTop:  0,
-          duration:   750,
-          easing:   'easeInOutSine'
+          delay:      750,
+          duration:   10,
+          easing:     'easeInOutSine'
         });
       }
-      // document.getElementsByClassName('page-intro')[0].classList.remove('page-intro');
-      // console.log(to.params.id);
-      // if (typeof(to.params.id) !== 'undefined' && to.params.id !== '') {
-      // if (typeof(to.params.id) == 'undefined' || to.params.id == '') {
-      //   var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
-      //   Vue.$animeJS({
-      //     targets:    scrollElement,
-      //     scrollTop:  0,
-      //     duration:   750,
-      //     easing:   'easeInOutSine'
-      //   });
-      // }
     }
   }
 }
