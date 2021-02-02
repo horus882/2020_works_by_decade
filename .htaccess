@@ -6,3 +6,21 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /work10/index.html [L]
 </IfModule>
+
+#暫存資源的預設使用期限為一個月
+ExpiresActive On ExpiresDefault "access plus 1 months"
+
+#針對html格式的文字檔，有效期限為兩週
+#ExpiresByType text/html "access 2 weeks"
+
+#針對不同格式的圖片，設置不同的有效期限
+ExpiresByType image/jpg "access 1 months"
+ExpiresByType image/svg "access 1 months"
+#ExpiresByType image/png "access 2 months"
+#ExpiresByType image/ico "access 6 months"
+
+#針對CSS格式的文字檔，有效期限為一個月
+ExpiresByType text/css "access 1 months"
+
+#JS格式的文字檔有效期限為一個月
+ExpiresByType text/js "access 1 months"

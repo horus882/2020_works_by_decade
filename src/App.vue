@@ -104,9 +104,7 @@ export default {
 
 <style lang="scss">
 
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
 
 #app {
   color: #000;
