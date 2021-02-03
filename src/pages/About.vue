@@ -17,9 +17,9 @@
     <section class="contact">
       <h3>Contact & Social</h3>
       <ul>
-        <li><a v-on:click="$trackEvent('E-mail', 'Click', 'About')" href="mailto:info@huangyikai.com" target="_blank">E-Mail</a></li>
-        <li><a v-on:click="$trackEvent('Facebook', 'Click', 'About')" href="https://www.facebook.com/huangyikai.photography/" target="_blank">Facebook</a></li>
-        <li><a v-on:click="$trackEvent('Instagram', 'Click', 'About')" href="https://www.instagram.com/huangyikai_photography/" target="_blank">Instagram</a></li>
+        <li><a v-on:click="$trackEvent('E-mail', 'Click', 'About')" href="mailto:medennisk@gmail.com" target="_blank">E-Mail</a></li>
+        <li><a v-on:click="$trackEvent('Facebook', 'Click', 'About')" href="https://www.facebook.com/deersummer/" target="_blank">Facebook</a></li>
+        <li><a v-on:click="$trackEvent('Instagram', 'Click', 'About')" href="https://www.instagram.com/huangyikai.ig/" target="_blank">Instagram</a></li>
       </ul>
     </section>
     <section class="offer">
