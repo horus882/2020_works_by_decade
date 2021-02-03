@@ -283,7 +283,7 @@ export default {
           type:       'Graphic / Chalk Drawing',
           thumbnail:  { loaded: false },
           folder:     '2013_morange_01',
-          media:      ['01.jpg','<div style="padding:51.52% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/499195879?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','03.jpg','04.jpg','05.jpg'],
+          media:      ['01.jpg','<div style="padding:51.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/499195879?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','03.jpg','04.jpg','05.jpg'],
           info:       'Agency : M’ORANGE<br>Designer : Huang Yi Kai<br>Blackboard Painter : Celia Cheng, Huang Yi Kai<br>Developer : Clouder Wang, Eia Hung<br>Project Specialist : Kate Lin'
         },
         {
