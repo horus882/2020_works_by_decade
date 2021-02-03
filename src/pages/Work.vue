@@ -6,7 +6,7 @@
       <div class="list" v-if="!this.$route.params.id">
         <ul>
           <li v-for="(item, index) in portfolio" v-bind:key="index" v-bind:style="{'transition-delay': (0.1 * index) + 's'}">
-            <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name">
+            <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name" v-on:click.native="$trackEvent(item.name, 'Click', 'Work')">
               <div :class="{loading: !item.thumbnail.loaded}" class="thumbnail">
                 <!-- <img :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)"> -->
                 <img v-lazy="getImageUrl('images/work/' + item.folder + '/cover.jpg')" :data-id="item.id">

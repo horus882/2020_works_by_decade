@@ -8,6 +8,8 @@ Vue.use(VueAnime);
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload)
 
+import VueGtag from "vue-gtag";
+
 // import { plugin as OnLoad } from 'vue-onload'
 // Vue.use(OnLoad);
 
@@ -58,6 +60,28 @@ router.beforeEach((to, from, next) => {
   }
   next();
 })
+
+Vue.use(VueGtag, {
+  config: { 
+    id: "UA-188863189-1",
+    params: {
+      send_page_view: false
+    }
+  }
+}, router);
+
+Vue.prototype.$trackPage = function(pageName) {
+  this.$gtag.pageview({
+    page_path: '/' + pageName,
+  })
+}
+
+Vue.prototype.$trackEvent = function(category, action, label) {
+  this.$gtag.event(action, {
+    'event_category': category,
+    'event_label': label
+  })
+}
 
 new Vue({
   router,
