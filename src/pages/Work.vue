@@ -9,7 +9,7 @@
             <router-link :to="{ name: 'Work', params: { id: item.id } }" :data-id="item.id" :data-year="item.year" :data-name="item.name">
               <div :class="{loading: !item.thumbnail.loaded}" class="thumbnail">
                 <!-- <img :src="item.thumbnail.src" v-on:load="thumbnailLoaded(item.id)"> -->
-                <img :src="getImageUrl('images/work/' + item.folder + '/cover.jpg')" v-on:load="thumbnailLoaded(item.id)">
+                <img v-lazy="getImageUrl('images/work/' + item.folder + '/cover.jpg')" :data-id="item.id">
               </div>
               <div class="info">
                 <p class="name">{{ item.name }}</p>
@@ -29,7 +29,8 @@
         </div>
         <div class="media">
           <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
-            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" :src="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
+            <!-- <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" :src="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)"> -->
+            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" v-lazy="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
             <div class="embed" v-html="item" v-else></div>
           </div>
           <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
@@ -328,12 +329,19 @@ export default {
       result[0].thumbnail.loaded = true;
     }
   },
-  // mounted() {
-  //   var sidebar = document.querySelector('#sidebar');
-  //   console.log(sidebar.scrollHeight);
-  //   var list = document.querySelector('.list');
-  //   console.log(document.body.contains(list));
-  // }
+  mounted() {
+    // var sidebar = document.querySelector('#sidebar');
+    // console.log(sidebar.scrollHeight);
+    // var list = document.querySelector('.list');
+    // console.log(document.body.contains(list));
+    var self = this;
+    this.$Lazyload.$on('loaded', function ({ el }) {
+      if (el.getAttribute('data-id') !== null) {
+        let id = el.getAttribute('data-id');
+        self.thumbnailLoaded(id);
+      }
+    })
+  }
 }
 </script>
 
@@ -405,9 +413,6 @@ export default {
           object-fit: cover;
           opacity: 1;
           transition: opacity .3s;
-          // &.loading {
-          //   opacity: 0;
-          // }
         }
         &::after {
           display: none;
@@ -569,6 +574,13 @@ export default {
         image-rendering: -webkit-optimize-contrast;
         pointer-events: none;
         // margin-bottom: 15px;
+        // filter: blur(5px);
+        opacity: 0;
+        transition: opacity .3s;
+        &[lazy="loaded"] {
+          opacity: 1;
+          // filter: blur(0);
+        }
       }
     }
 

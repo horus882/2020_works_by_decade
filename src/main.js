@@ -5,6 +5,9 @@ import VueRouter from 'vue-router'
 import VueAnime from './vue-anime';
 Vue.use(VueAnime);
 
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
 // import { plugin as OnLoad } from 'vue-onload'
 // Vue.use(OnLoad);
 
