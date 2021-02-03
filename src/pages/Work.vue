@@ -29,7 +29,6 @@
         </div>
         <div class="media">
           <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
-            <!-- <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" :src="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)"> -->
             <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" v-lazy="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
             <div class="embed" v-html="item" v-else></div>
           </div>
@@ -69,13 +68,13 @@ export default {
         },
         {
           id:         2,
-          name:       'Kiânn Official Site Intro : Let’s Kiann',
+          name:       'Kiânn Official Site Intro : Let’s Kiânn',
           year:       2020,
-          type:       'Concept / Storyboard / Motionboard / Art & Graphic',
+          type:       'Concept / Art & Graphic / Storyboard / Motionboard',
           thumbnail:  { loaded: false },
           folder:     '2020_kiann_02',
           media:      ['<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.jpg','04.jpg','05.gif','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg'],
-          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Website Designer : Huang Yi Kai<br>Animation Director : Tubo Lee<br>Project Manager : Akasha Wu<br>Cel animation : Szyu Pan<br>Motion Design :  Tubo Lee / Toastwo Creative<br>Music & Sound Design : Co-op Works'
+          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Storyboard : Huang Yi Kai<br>Motionboard : Huang Yi Kai<br>Animation Director : Tubo Lee<br>Project Manager : Akasha Wu<br>Cel animation : Szyu Pan<br>Motion Design : Tubo Lee / Toastwo Creative<br>Music & Sound Design : Co-op Works'
         },
         {
           id:         3,
@@ -151,7 +150,7 @@ export default {
           id:         10,
           name:       'New Balance Campus Relay Campaign',
           year:       2018,
-          type:       '(Proposed Design) Key Visual Mockup / Typography / Package Design',
+          type:       '(Proposed Design) Key Visual Mockup / Typography / Package',
           thumbnail:  { loaded: false },
           folder:     '2018_nb_01',
           media:      ['01.jpg','02.jpg','03.gif','04.jpg','05.jpg','06.jpg'],
@@ -209,7 +208,7 @@ export default {
         },
         {
           id:         16,
-          name:       'Kirin GoGoTea ”30 Days of Little Luxury” Campaign',
+          name:       'Kirin Gogotea ”30 Days of Little Luxury” Campaign',
           year:       2016,
           type:       'Graphic / Photography / Exhibition',
           thumbnail:  { loaded: false },
@@ -219,7 +218,7 @@ export default {
         },
         {
           id:         17,
-          name:       'Kirin GoGoTea Autumn Special Recipe Video',
+          name:       'Kirin Gogotea Autumn Special Recipe Video',
           year:       2016,
           type:       'Typography',
           thumbnail:  { loaded: false },
@@ -229,7 +228,7 @@ export default {
         },
         {
           id:         18,
-          name:       'Kirin GoGoTea Lucky Draw Campaign',
+          name:       'Kirin Gogotea Lucky Draw Campaign',
           year:       2016,
           type:       'Website',
           thumbnail:  { loaded: false },
@@ -261,7 +260,7 @@ export default {
           id:         21,
           name:       'Adidas Women Training Campaign',
           year:       2015,
-          type:       'Website / Visual / Typography',
+          type:       'Website / Typography',
           thumbnail:  { loaded: false },
           folder:     '2015_adidas_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg'],
@@ -289,7 +288,7 @@ export default {
         },
         {
           id:         24,
-          name:       'Nike free illustration',
+          name:       'Nike Free Illustration',
           year:       2011,
           type:       '(Design Based on Nike Corporate Materials / Proposed Design) Illustration',
           thumbnail:  { loaded: false },
@@ -299,7 +298,7 @@ export default {
         },
         {
           id:         25,
-          name:       'M’ORANGE Internal Worksop',
+          name:       'M’ORANGE Internal Workshop',
           year:       2010,
           type:       'Graphic / Photography / Typography',
           thumbnail:  { loaded: false },
