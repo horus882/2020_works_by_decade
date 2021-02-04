@@ -26,6 +26,7 @@
         <div class="head">
           <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
           <p class="type">{{ this.portfolio[this.$route.params.id - 1].type }}</p>
+          <Share />
         </div>
         <div class="media">
           <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
@@ -36,6 +37,7 @@
         </div>
         <div class="info">
           <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/:/g, '<i></i>')"></p>
+          <Share />
         </div>
         <Footer />
       </div>
@@ -45,11 +47,13 @@
 
 <script>
 import Footer from '../components/Footer.vue'
+import Share from '../components/Share.vue'
 
 export default {
   name: 'Work',
   components: {
-    Footer
+    Footer,
+    Share
   },
   props: {
   },
@@ -549,6 +553,11 @@ export default {
           margin: 14px 0 0;
         }
       }
+      .share {
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s cubic-bezier(0.25, 1, 0.5, 1) .95s;
+      }
     }
 
     &.fade-enter,
@@ -556,7 +565,7 @@ export default {
 
       .head {
 
-        h3, .type {
+        h3, .type, .share {
           opacity: 0;
           transform: translateX(-25px);
         }

@@ -8,6 +8,9 @@ Vue.use(VueAnime);
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload)
 
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard)
+
 import VueGtag from "vue-gtag";
 
 // import { plugin as OnLoad } from 'vue-onload'
