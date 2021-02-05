@@ -23,12 +23,19 @@
       </ul>
     </section>
     <section class="offer">
-      <h3>Offer for Work</h3>
+      <h3>Services Offered</h3>
       <p class="text">
         Logo Design, Corporation Identity Design,<br> 
         Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
         <!-- Logo Design, Corporation Identity Design,
         Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12"> -->
+      </p>
+    </section>
+    <section class="credits">
+      <h3>Special Thanks</h3>
+      <p class="text">
+        Website Developer : <a v-on:click="$trackEvent('Credits-Brent', 'Click', 'About')" href="https://www.facebook.com/horus882/" target="_blank">Brent Hsieh</a><br>
+        English Translations : <a v-on:click="$trackEvent('Credits-Jolie', 'Click', 'About')" href="mailto:jcnthingsinfo@gmail.com" target="_blank">Jolie Chang Nicaretta</a>
       </p>
     </section>
     <Footer />
@@ -81,6 +88,7 @@ export default {
     }
     &.contact {transition-delay: .2s;}
     &.offer {transition-delay: .3s;}
+    &.credits {transition-delay: .4s;}
     @media (min-width: $screen-md) {
       padding-top: 47px;
     }
@@ -101,7 +109,6 @@ export default {
         a {
           position: relative;
           font-weight: 700;
-          text-decoration: underline;
           letter-spacing: $default-letter-spacing;
           @media (min-width: $screen-md) {
             font-size: 16px;
@@ -126,6 +133,7 @@ export default {
         }
       }
     }
+    a { text-decoration: underline; }
     .text {letter-spacing: 0;}
   }
 

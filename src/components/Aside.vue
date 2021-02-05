@@ -66,11 +66,11 @@ aside {
     content: '';
     position: absolute;
     top: -23px;
-    left: 120px;
-    width: 190px;
+    left: 140px;
+    width: 150px;
     height: 190px;
     background: url(../assets/images/cross.svg) center center no-repeat;
-    background-size: contain;
+    background-size: 190px 190px;
   }
 
   a, p {

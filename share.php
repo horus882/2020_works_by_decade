@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
     switch($_GET['id']) {
         case '1':
             $site_title = 'Work of a Decade : Kiânn Official Site';
-            $site_description = 'Client : Starlux Airlines / Website Design';
+            $site_description = 'Client : Starlux Airlines．2020．Official Site';
             break;
         case '2':
             $site_title = 'Work of a Decade : Let’s Kiânn';
@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
             break;
         case '8':
             $site_title = 'Work of a Decade : Kirin Travel Hyoketsu Campaign';
-            $site_description = 'Client : Kirin Taiwan．2018．Website / Typography / Handwriting';
+            $site_description = 'Client : Kirin Taiwan．2018．Website / Graphic / Typography / Handwriting';
             break;
         case '9':
             $site_title = 'Work of a Decade : Kirin Gogotea Photography';
@@ -60,11 +60,11 @@ if (isset($_GET['id'])) {
             break;
         case '12':
             $site_title = 'Work of a Decade : New Balance Official Site';
-            $site_description = 'Client : New Balance Taiwan．2017．Website Design';
+            $site_description = 'Client : New Balance Taiwan．2017．Official Site Design';
             break;
         case '13':
             $site_title = 'Work of a Decade : New Balance 247 Campaign';
-            $site_description = 'Client : New Balance Taiwan．2017．Website / Element / Handwriting / Typography / OOH / Event Materials / Printed Materials';
+            $site_description = 'Client : New Balance Taiwan．2017．Website / Handwriting / Typography / OOH / Element / Event Materials / Printed Materials';
             break;
         case '14':
             $site_title = 'Work of a Decade : MUJI Skin Care Campaign';
@@ -72,7 +72,7 @@ if (isset($_GET['id'])) {
             break;
         case '15':
             $site_title = 'Work of a Decade : Macro Maison Official Site';
-            $site_description = 'Client : Macro Maison．2016．Website / Backdrop & Scene Design';
+            $site_description = 'Client : Macro Maison．2016．Official Site / Backdrop & Scene Design';
             break;
         case '16':
             $site_title = 'Work of a Decade : Kirin Gogotea ”30 Days of Little Luxury” Campaign';
@@ -92,11 +92,11 @@ if (isset($_GET['id'])) {
             break;
         case '20':
             $site_title = 'Work of a Decade : Audi Features of the A6 & S8';
-            $site_description = 'Client : Audi Taiwan．2016．Layout';
+            $site_description = 'Client : Audi Taiwan．2016．Social Post Layout';
             break;
         case '21':
             $site_title = 'Work of a Decade : Adidas Women Training Campaign';
-            $site_description = 'Client : Adidas Taiwan．2015．Website / Typography';
+            $site_description = 'Client : Adidas Taiwan．2015．Website / Typography / Element';
             break;
         case '22':
             $site_title = 'Work of a Decade : Audi A3 Launch Campaign';

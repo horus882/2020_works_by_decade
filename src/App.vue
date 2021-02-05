@@ -10,9 +10,9 @@
         <Aside v-show="currentPage == 'index'" />
       </transition>
 
-      <!-- <transition name="fade"> -->
-      <router-link v-show="currentPage != 'index'" to="/" class="back text-hide" title="Back to Home">Home</router-link>
-      <!-- </transition> -->
+      <transition name="delay-fade">
+        <router-link v-show="currentPage != 'index'" to="/" class="back text-hide" title="Back to Home">Home</router-link>
+      </transition>
 
     </div>
   </div>
@@ -245,6 +245,9 @@ h3 {
   height: 30px;
   background: url(./assets/images/cross.svg) center center no-repeat;
   background-size: contain;
+  @at-root {
+    #main.index .back {display: none;}
+  }
   @media (min-width: $screen-md) {
     top: 60px;
     right: 70px;
@@ -271,6 +274,19 @@ h3 {
 }
 
 .fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+.delay-fade-enter-active, .delay-fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .75s;
+}
+
+.delay-fade-enter-active {
+  transition-delay: 1.25s;
+}
+
+.delay-fade-enter, .delay-fade-leave-active {
   opacity: 0
 }
 
