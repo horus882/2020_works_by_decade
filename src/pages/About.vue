@@ -5,13 +5,11 @@
       <h3>Introduction</h3>
       <p class="text">
         Huang Yi Kai.<br>
-        The Taiwanese designer was born in Tainan in 1968 and currently resides in Taipei City. He has been with M’ORANGE, a digital consulting service, for ten years, ever since finishing school. He has worked with numerous clients, building a portfolio of a wide variety of projects and visual styles.   Responding to client needs and working within market limitations, Yi Kai constructs balanced solutions without compromising the intrinsic value of his designs. To meet the different challenges of various market trends and client requests, he provides services that include not only website design, but also graphic design, visual conceptualization, exhibit coordination, artistic direction, and more. <br>
+        The Taiwanese designer was born in Tainan in 1986 and currently resides in Taipei City. He has been with M’ORANGE, a digital consulting service, for ten years, ever since finishing school. He has worked with numerous clients, building a portfolio of a wide variety of projects and visual styles.   Responding to client needs and working within market limitations, Yi Kai constructs balanced solutions without compromising the intrinsic value of his designs. To meet the different challenges of various market trends and client requests, he provides services that include not only website design, but also graphic design, visual conceptualization, exhibit coordination, artistic direction, and more. <br>
         <br>
         He works with utmost insistence on authenticity, holding firm the belief that “good design” can change a society. Passing down tenets of good practices, he hopes to help shape design culture.<br>
         <br>
         His past clients included Nike, Adidas, New Balance, P&G, SK-II, Olay, Audi, kiânn, MUJI, KIRIN, Macro Maison, Pauian, Tefal, Darlie, Family Mart, Philips Air, YUAN, HeySong, Brand’s, KLIM, Kee Wah, Shinkong Life Foundation, etc. <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
-        <!-- Huang Yi Kai. <br>
-        He was born in Tainan in 1986. He lives in Taipei currently. Ever since remembered, he was strongly affected by his parents’ passion for taking pictures when he was young; thus, he acquires a habit of photography. After using film camera, he begins to learn to observe things in detail, to capture both the warmth of the fleeting scenes and the real scenes before his very eyes. In 2012 he formed “The Boy’s Holiday Committee” with two of his friends. In 2013 they published "Sakyoto daily day-off" with Kyoto scenes as the main topic. In 2015 they published "Douou daily-day off" with traveling to Sapporo as topic. While having extensive experience, he participates in many different activities increasingly. <img v-bind:src="require('@/assets/images/cross.svg')" width="12"> -->
       </p>
     </section>
     <section class="contact">
@@ -27,8 +25,6 @@
       <p class="text">
         Logo Design, Corporation Identity Design,<br> 
         Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
-        <!-- Logo Design, Corporation Identity Design,
-        Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12"> -->
       </p>
     </section>
     <section class="credits">
@@ -55,7 +51,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 #page-about {

@@ -1,8 +1,6 @@
 <template>
   <div class="share">
     <a href="#" v-on:click.prevent="shareToFacebook">Share</a>
-    <!-- <a :href="href" target="_blank" v-on:click="$trackEvent('Share-' + $route.path, 'Click', 'Work')">Share</a> -->
-    <!-- <a v-on:click="shareToFacebook">Share</a> -->
     <a href="#" v-clipboard:copy="link" v-clipboard:success="onCopy" v-clipboard:error="onError" v-on:click.prevent="$trackEvent('Copy-' + $route.path, 'Click', 'Work')">Copy Link</a>
   </div>
 </template>
@@ -20,7 +18,6 @@ export default {
   },
   methods: {
     shareToFacebook: function() {
-      // console.log(this.link);
       window.open(this.href, '_blank', 'width=640, height=480');
       this.$trackEvent('Share-' + this.$route.path, 'Click', 'Work');
     },

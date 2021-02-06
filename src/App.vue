@@ -21,7 +21,7 @@
 <script>
 
 import Aside from './components/Aside.vue'
-import Vue from 'vue'
+// import Vue from 'vue'
 
 export default {
   name: 'App',
@@ -88,14 +88,17 @@ export default {
     $route(to) { // to, from
       this.checkCurrentPage();
       if ((to.name == 'Work' && typeof(to.params.id) !== 'undefined') || to.name != 'Work') {
-        var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
-        Vue.$animeJS({
-          targets:    scrollElement,
-          scrollTop:  0,
-          delay:      750,
-          duration:   10,
-          easing:     'easeInOutSine'
-        });
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 750)
+        // var scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement;
+        // Vue.$animeJS({
+        //   targets:    scrollElement,
+        //   scrollTop:  0,
+        //   delay:      750,
+        //   duration:   10,
+        //   easing:     'easeInOutSine'
+        // });
       }
     }
   }

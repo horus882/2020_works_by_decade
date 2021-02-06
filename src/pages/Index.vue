@@ -1,9 +1,5 @@
 <template>
   <div id="page-index" class="page">
-    <!--
-    <div class="background-desktop" v-bind:style="{'background-image': 'url(' + require('@/assets/images/home/desktop-' + backgroundId + '.jpg') + ')'}"></div>
-    <div class="background-mobile" v-bind:style="{'background-image': 'url(' + require('@/assets/images/home/mobile-' + backgroundId + '.jpg') + ')'}"></div>
-    -->
     <div class="background">
       <div class="background-desktop" v-lazy:background-image="require('@/assets/images/home/desktop-' + backgroundId + '.jpg')"></div>
       <div class="background-mobile" v-lazy:background-image="require('@/assets/images/home/mobile-' + backgroundId + '.jpg')"></div>
@@ -27,7 +23,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 
 html {height: 100vh;}

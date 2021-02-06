@@ -33,7 +33,6 @@
             <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" v-lazy="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
             <div class="embed" v-html="item" v-else></div>
           </div>
-          <!-- <img :src="this.portfolio[this.$route.params.id - 1].images[2]"> -->
         </div>
         <div class="info">
           <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/:/g, '<i></i>')"></p>
@@ -348,7 +347,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 
 #page-works {
