@@ -23,8 +23,13 @@
     <section class="offer">
       <h3>Services Offered</h3>
       <p class="text">
+        Logo Design, Typography Design,<br>
+        Corporation Identity Design,<br>
+        Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
+<!--
         Logo Design, Corporation Identity Design,<br> 
         Brand Art Direction, Website Design <img v-bind:src="require('@/assets/images/cross.svg')" width="12">
+-->
       </p>
     </section>
     <section class="credits">

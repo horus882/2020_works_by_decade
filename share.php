@@ -114,6 +114,10 @@ if (isset($_GET['id'])) {
             $site_title = 'Work of a Decade : M’ORANGE Internal Workshop';
             $site_description = 'M’ORANGE Internal Workshop．2010．Graphic / Photography / Typography';
             break;
+        case '26':
+            $site_title = 'Work of a Decade : Kirin Ichi-Ban Beer Social Media Post';
+            $site_description = 'Client : Kirin Taiwan．2020．Graphic / Calligraphy / Handwriting';
+            break;
     }
 
 }

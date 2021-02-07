@@ -24,6 +24,21 @@
     <transition name="fade">
       <div class="detail" v-if="this.$route.params.id">
         <div class="head">
+          <h3 class="title">{{ getCurrentWork('name') }} <span>({{ getCurrentWork('year') }})</span></h3>
+          <p class="type">{{ getCurrentWork('type') }}</p>
+          <Share />
+        </div>
+        <div class="media">
+          <div v-for="(item, index) in getCurrentWork('media')" v-bind:key="index">
+            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" v-lazy="getImageUrl('images/work/' + getCurrentWork('folder') + '/' + item)">
+            <div class="embed" v-html="item" v-else></div>
+          </div>
+        </div>
+        <div class="info">
+          <p v-html="getCurrentWork('info').replace(/:/g, '<i></i>')"></p>
+          <Share />
+        </div>
+        <!-- <div class="head">
           <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
           <p class="type">{{ this.portfolio[this.$route.params.id - 1].type }}</p>
           <Share />
@@ -37,7 +52,7 @@
         <div class="info">
           <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/:/g, '<i></i>')"></p>
           <Share />
-        </div>
+        </div> -->
         <Footer />
       </div>
     </transition>
@@ -78,6 +93,16 @@ export default {
           folder:     '2020_kiann_02',
           media:      ['<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.jpg','04.jpg','05.gif','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg'],
           info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Storyboard : Huang Yi Kai<br>Motionboard : Huang Yi Kai<br>Animation Director : Tubo Lee<br>Project Manager : Akasha Wu<br>Cel animation : Szyu Pan<br>Motion Design : Tubo Lee / Toastwo Creative<br>Music & Sound Design : Co-op Works'
+        },
+        {
+          id:         26,
+          name:       'Kirin Ichi-Ban Beer Social Media Post',
+          year:       2020,
+          type:       '(Jan.-Dec., 2020) Graphic / Calligraphy / Handwriting',
+          thumbnail:  { loaded: false },
+          folder:     '2020_kirin_01',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg'],
+          info:       'Client : Kirin Taiwan<br>Agency : M’ORANGE<br>Project Manager : Sinia Peng, Judy Lin, Alvin Luo<br>Creative : Pulan Chen, Eva Wu, Angie Chang<br>Designer : Huang Yi Kai<br>Photography : Maxi Ho Photography Studio<br>Photography Specialist : Ethan Wang'
         },
         {
           id:         3,
@@ -318,12 +343,19 @@ export default {
     }
   },
   methods: {
+    getCurrentWork(prop) {
+      var self = this;
+      let work = this.portfolio.filter(function(item) {
+        return item.id == self.$route.params.id;
+      });
+      return work[0][prop];
+    },
     getImageUrl(source) {
       return require('../assets/' + source);
     },
-    getCurrentId() {
-      return this.$route.params.id - 1;
-    },
+    // getCurrentId() {
+    //   return this.$route.params.id - 1;
+    // },
     thumbnailLoaded(index) {
       var result = this.portfolio.filter(function(item) {
         return item.id == index;
