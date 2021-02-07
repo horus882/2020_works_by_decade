@@ -96,7 +96,7 @@ html {height: 100vh;}
 
   .background-mobile {
     transform: translate3d(0, 0, 0);
-    background-image: url(../assets/images/home/mobile-1.jpg);
+    // background-image: url(../assets/images/home/mobile-1.jpg);
     @media (min-width: $screen-lg) {
       display: none;
     }
