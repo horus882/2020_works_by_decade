@@ -38,21 +38,6 @@
           <p v-html="getCurrentWork('info').replace(/:/g, '<i></i>')"></p>
           <Share />
         </div>
-        <!-- <div class="head">
-          <h3 class="title">{{ this.portfolio[this.$route.params.id - 1].name }} <span>({{ this.portfolio[this.$route.params.id - 1].year }})</span></h3>
-          <p class="type">{{ this.portfolio[this.$route.params.id - 1].type }}</p>
-          <Share />
-        </div>
-        <div class="media">
-          <div v-for="(item, index) in this.portfolio[this.$route.params.id - 1].media" v-bind:key="index">
-            <img v-if="/[\/.](gif|jpg|jpeg|tiff|png)$/g.test(item)" v-lazy="getImageUrl('images/work/' + $data.portfolio[getCurrentId()].folder + '/' + item)">
-            <div class="embed" v-html="item" v-else></div>
-          </div>
-        </div>
-        <div class="info">
-          <p v-html="this.portfolio[this.$route.params.id - 1].info.replace(/:/g, '<i></i>')"></p>
-          <Share />
-        </div> -->
         <Footer />
       </div>
     </transition>
@@ -292,7 +277,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2015_adidas_01',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg'],
-          info:       'Client : Adidas Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, Elaine Lin<br>Creative : Josephine Lin, Fish Chang, Ming Gao<br>Design Director : Celia Cheng<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Shine Cheng, Chiou Chu'
+          info:       'Client : Adidas Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Melody Gao, Tammy Yu<br>Creative : Josephine Lin, Fish Chang, Ming Gao<br>Design Director : Celia Cheng<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Shine Cheng, Chiou Chu'
         },
         {
           id:         22,
@@ -353,9 +338,6 @@ export default {
     getImageUrl(source) {
       return require('../assets/' + source);
     },
-    // getCurrentId() {
-    //   return this.$route.params.id - 1;
-    // },
     thumbnailLoaded(index) {
       var result = this.portfolio.filter(function(item) {
         return item.id == index;
