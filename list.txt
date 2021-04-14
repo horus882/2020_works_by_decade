@@ -1,0 +1,27 @@
+/Users/brent/Documents/GitHub/2020_works_by_decade/src
+├── App.vue
+├── assets
+|  ├── images
+|  |  ├── arrow.svg
+|  |  ├── cross.svg
+|  |  ├── cross_v1.svg
+|  |  ├── home
+|  |  ├── logo.png
+|  |  ├── slash.svg
+|  |  ├── slash_v1.svg
+|  |  └── work
+|  └── styles
+|     └── _variables.scss
+├── components
+|  ├── Aside.vue
+|  ├── Footer.vue
+|  └── Share.vue
+├── main.js
+├── pages
+|  ├── About.vue
+|  ├── Index.vue
+|  └── Work.vue
+└── vue-anime.js
+
+directory: 7 file: 16
+
