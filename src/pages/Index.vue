@@ -18,6 +18,7 @@ export default {
     }
   },
   mounted() {
+    document.dispatchEvent(new Event('render-event'));
     this.backgroundId = (Math.floor(Math.random() * 8) + 1);
   }
 }
