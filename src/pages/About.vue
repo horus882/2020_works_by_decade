@@ -52,9 +52,6 @@ export default {
     Footer
   },
   props: {
-  },
-  mounted() {
-    document.dispatchEvent(new Event('render-event'));
   }
 }
 </script>

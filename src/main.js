@@ -90,4 +90,7 @@ new Vue({
   router,
   el: '#app',
   render: h => h(App),
+  mounted() {
+    document.dispatchEvent(new Event('render-event'));
+  }
 }).$mount('#app')
