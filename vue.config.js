@@ -49,6 +49,6 @@ module.exports = {
     // devServer: {
     //     historyApiFallback: true
     // },
-    // publicPath: './'
-    publicPath: process.env.NODE_ENV === 'production' ? '/work10/' : '/'
+    publicPath: '/'
+    // publicPath: process.env.NODE_ENV === 'production' ? '/work10/' : '/'
 }
