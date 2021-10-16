@@ -31,11 +31,11 @@ if (isset($_GET['id'])) {
             $site_description = 'Client : Yuan．2019．Website Design';
             break;
         case '5':
-            $site_title = 'Work of a Decade : M’ORANGE Annual Briefing Key Visual';
+            $site_title = 'Work of a Decade : Annual Briefing Key Visual';
             $site_description = 'M’ORANGE Internal Project．2019．Graphic Design';
             break;
         case '6':
-            $site_title = 'Work of a Decade : M’ORANGE Christmas Greeting Card';
+            $site_title = 'Work of a Decade : Christmas Greeting Card';
             $site_description = 'M’ORANGE Internal Project．2019．Graphic / Photography / Handwriting';
             break;
         case '7':
@@ -103,7 +103,7 @@ if (isset($_GET['id'])) {
             $site_description = 'Client : Audi Taiwan．2013．Website Design';
             break;
         case '23':
-            $site_title = 'Work of a Decade : M’ORANGE Christmas Greeting Project';
+            $site_title = 'Work of a Decade : Christmas Greeting Project';
             $site_description = 'M’ORANGE Internal Project．2013．Graphic / Chalk Drawing';
             break;
         case '24':
@@ -111,12 +111,32 @@ if (isset($_GET['id'])) {
             $site_description = 'Client : Nike Taiwan．2011．Illustration';
             break;
         case '25':
-            $site_title = 'Work of a Decade : M’ORANGE Internal Workshop';
+            $site_title = 'Work of a Decade : Internal Workshop';
             $site_description = 'M’ORANGE Internal Workshop．2010．Graphic / Photography / Typography';
             break;
         case '26':
             $site_title = 'Work of a Decade : Kirin Ichi-Ban Beer Social Media Post';
             $site_description = 'Client : Kirin Taiwan．2020．Graphic / Calligraphy / Handwriting';
+            break;
+        case '27':
+            $site_title = 'Work of a Decade : Moon Festival Greeting Project';
+            $site_description = 'M’ORANGE Internal Project．2021．Concept / Art & Graphic / Storyboard / Animation';
+            break;
+        case '28':
+            $site_title = 'Work of a Decade : Lunar New Year Greeting Project';
+            $site_description = 'M’ORANGE Internal Project．2021．Concept / Art & Graphic / Animation';
+            break;
+        case '29':
+            $site_title = 'Work of a Decade : Darlie Package Redesign';
+            $site_description = 'Client : Darlie Taiwan．2018．Package';
+            break;
+        case '30':
+            $site_title = 'Work of a Decade : New Balance Q3 Run Far Campaign';
+            $site_description = 'Client : New Balance Taiwan．2018．Website / Typography';
+            break;
+        case '31':
+            $site_title = 'Work of a Decade : New Balance Q4 NYC Marathon Pack Campaign';
+            $site_description = 'Client : New Balance Taiwan．2018．Website / Typography';
             break;
     }
 

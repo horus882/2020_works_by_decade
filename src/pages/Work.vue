@@ -59,6 +59,36 @@ export default {
   data() {
     return {
       portfolio:    [
+        // {
+        //   id:         ,
+        //   name:       '',
+        //   year:       20,
+        //   type:       '',
+        //   thumbnail:  { loaded: false },
+        //   folder:     '',
+        //   media:      ['01.jpg','02.jpg','03.jpg'],
+        //   info:       ''
+        // },
+        {
+          id:         27,
+          name:       'Moon Festival Greeting Project',
+          year:       2021,
+          type:       'Concept / Art & Graphic / Storyboard / Animation',
+          thumbnail:  { loaded: false },
+          folder:     '2021_morange_01',
+          media:      ['<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/632898296?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.gif','04.jpg'],
+          info:       'Agency : M’ORANGE<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Storyboard : Huang Yi Kai<br>Animation : Huang Yi Kai'
+        },
+        {
+          id:         28,
+          name:       'Lunar New Year Greeting Project',
+          year:       2021,
+          type:       'Concept / Art & Graphic / Animation',
+          thumbnail:  { loaded: false },
+          folder:     '2021_morange_02',
+          media:      ['01.gif','02.jpg','03.jpg'],
+          info:       'Agency : M’ORANGE<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Animation : Huang Yi Kai'
+        },
         {
           id:         1,
           name:       'Kiânn Official Site',
@@ -66,7 +96,7 @@ export default {
           type:       'Official Site',
           thumbnail:  { loaded: false },
           folder:     '2020_kiann_01',
-          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg'],
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.gif','07_01.jpg','07_02.gif','07_03.jpg','07_04.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg'],
           info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Project Manager : Kevin Chen, Welson Hsiao<br>Website Designer : Huang Yi Kai<br>Developer : Clouder Wang, Leo Lin, Brent Hsieh'
         },
         {
@@ -77,7 +107,7 @@ export default {
           thumbnail:  { loaded: false },
           folder:     '2020_kiann_02',
           media:      ['<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/487718203?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.jpg','04.jpg','05.gif','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg'],
-          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Storyboard : Huang Yi Kai<br>Motionboard : Huang Yi Kai<br>Animation Director : Tubo Lee<br>Project Manager : Akasha Wu<br>Cel animation : Szyu Pan<br>Motion Design : Tubo Lee / Toastwo Creative<br>Music & Sound Design : Co-op Works'
+          info:       'Client : Starlux Airlines<br>Agency : M’ORANGE<br>Editorial Director : Melody Kao / Estate Media<br>Design Executive Director : Mong Lee<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Storyboard : Huang Yi Kai<br>Motionboard : Huang Yi Kai<br>Animation Director : Tubo Lee<br>Project Manager : Akasha Wu<br>Cel Animation : Szyu Pan<br>Motion Design : Tubo Lee / Toastwo Creative<br>Music & Sound Design : Co-op Works'
         },
         {
           id:         26,
@@ -111,7 +141,7 @@ export default {
         },
         {
           id:         5,
-          name:       'M’ORANGE Annual Briefing Key Visual',
+          name:       'Annual Briefing Key Visual',
           year:       2019,
           type:       'Graphic',
           thumbnail:  { loaded: false },
@@ -121,13 +151,23 @@ export default {
         },
         {
           id:         6,
-          name:       'M’ORANGE Christmas Greeting Card',
+          name:       'Christmas Greeting Card',
           year:       2019,
           type:       'Graphic / Photography / Handwriting',
           thumbnail:  { loaded: false },
           folder:     '2019_morange_02',
           media:      ['01.jpg','02.jpg','03.jpg','04.jpg'],
           info:       'Agency : M’ORANGE<br>Creative : Jacky Wen<br>Designer : Huang Yi Kai<br>Project Specialist : Kate Lin<br>Model : Naomi Hsieh<br>Project Specialist : Kate Lin'
+        },
+        {
+          id:         29,
+          name:       'Darlie Package Redesign',
+          year:       2018,
+          type:       '(Proposed Design) Package',
+          thumbnail:  { loaded: false },
+          folder:     '2018_darlie_01',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg'],
+          info:       'Client : Darlie Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jennifer Jiang、Summer Wu<br>Creative : Jacky Wen、Ron Yang、Pulan Chen<br>Designer : Huang Yi Kai'
         },
         {
           id:         7,
@@ -170,6 +210,26 @@ export default {
           info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Nita Shih, Jessy Ho, Erik Huang<br>Creative : Jacky Wen, Muji Lin, Zoi Hung<br>Designer : Huang Yi Kai'
         },
         {
+          id:         30,
+          name:       'New Balance Q3 Run Far Campaign',
+          year:       2018,
+          type:       'Website / Typography',
+          thumbnail:  { loaded: false },
+          folder:     '2018_nb_02',
+          media:      ['01.gif','02.gif','03.jpg','04.gif','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg'],
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Philly Wu、Erik Huang<br>Creative : Jacky Wen、Muji Lin、Zoi Hung、Hawkins Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh、Eia Hung<br>Public Relations : Monica Chen、Flora Huang'
+        },
+        {
+          id:         31,
+          name:       'New Balance Q4 NYC Marathon Pack Campaign',
+          year:       2018,
+          type:       '(Proposed Website) Website / Typography',
+          thumbnail:  { loaded: false },
+          folder:     '2018_nb_03',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg'],
+          info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Jessy Ho、Erik Huang、Philly Wu<br>Creative : Jacky Wen、Muji Lin、Zoi Hung、Hawkins Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang、Brent Hsieh、Eia Hung<br>Public Relations : Monica Chen、Flora Huang<br>Cartoonist & Illustration : Hong Yuan-Jian (JIAN\'S WORK)'
+        },
+        {
           id:         11,
           name:       'New Balance Campus Relay Campaign',
           year:       2017,
@@ -186,7 +246,7 @@ export default {
           type:       'Official Site',
           thumbnail:  { loaded: false },
           folder:     '2017_nb_02',
-          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg'],
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.gif','08.jpg','09.jpg','10.gif','11.gif','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg'],
           info:       'Client : New Balance Taiwan<br>Agency : M’ORANGE<br>Project Manager : Kevin Chen, Judy Lin<br>Designer : Huang Yi Kai<br>Developer : Clouder Wang, Shine Cheng'
         },
         {
@@ -291,7 +351,7 @@ export default {
         },
         {
           id:         23,
-          name:       'M’ORANGE Christmas Greeting Project',
+          name:       'Christmas Greeting Project',
           year:       2013,
           type:       'Graphic / Chalk Drawing',
           thumbnail:  { loaded: false },
@@ -311,7 +371,7 @@ export default {
         },
         {
           id:         25,
-          name:       'M’ORANGE Internal Workshop',
+          name:       'Internal Workshop',
           year:       2010,
           type:       'Graphic / Photography / Typography',
           thumbnail:  { loaded: false },
