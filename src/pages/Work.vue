@@ -70,13 +70,23 @@ export default {
         //   info:       ''
         // },
         {
+          id:         32,
+          name:       'Resume',
+          year:       2021,
+          type:       'Layout / Art & Graphic',
+          thumbnail:  { loaded: false },
+          folder:     '2021_resume',
+          media:      ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg','07.jpg','08.jpg','09.jpg'],
+          info:       'Layout : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai'
+        },
+        {
           id:         27,
           name:       'Moon Festival Greeting Project',
           year:       2021,
           type:       'Concept / Art & Graphic / Storyboard / Animation',
           thumbnail:  { loaded: false },
           folder:     '2021_morange_01',
-          media:      ['<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/632898296?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.gif','04.jpg'],
+          media:      ['<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/634337523?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>','02.jpg','03.gif','04.jpg'],
           info:       'Agency : M’ORANGE<br>Concept : Huang Yi Kai<br>Art & Graphic : Huang Yi Kai<br>Storyboard : Huang Yi Kai<br>Animation : Huang Yi Kai'
         },
         {

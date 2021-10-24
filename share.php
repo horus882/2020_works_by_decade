@@ -138,6 +138,10 @@ if (isset($_GET['id'])) {
             $site_title = 'Work of a Decade : New Balance Q4 NYC Marathon Pack Campaign';
             $site_description = 'Client : New Balance Taiwan．2018．Website / Typography';
             break;
+        case '32':
+            $site_title = 'Work of a Decade : Resume';
+            $site_description = '2021．Layout / Art & Graphic';
+            break;
     }
 
 }
